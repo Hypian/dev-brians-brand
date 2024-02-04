@@ -37,6 +37,7 @@ button {
   z-index: 7;
 }
 .sign-up {
+	cursor: pointer;
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
@@ -54,6 +55,7 @@ button {
   z-index: 3;
 }
 .login {
+	cursor: pointer;
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
@@ -152,6 +154,7 @@ button {
   z-index: 14;
 }
 .contact {
+	cursor: pointer;
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
@@ -169,6 +172,7 @@ button {
   z-index: 14;
 }
 .service {
+	cursor: pointer;
   position: absolute;
   width: 131px;
   height: 36px;
@@ -186,6 +190,7 @@ button {
   z-index: 10;
 }
 .about {
+ cursor: pointer;
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
@@ -203,6 +208,7 @@ button {
   z-index: 11;
 }
 .skills {
+	cursor: pointer;
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
@@ -220,6 +226,7 @@ button {
   z-index: 12;
 }
 .home {
+	cursor:pointer;
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
@@ -237,6 +244,7 @@ button {
   z-index: 9;
 }
 .blog {
+	cursor: pointer;
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
