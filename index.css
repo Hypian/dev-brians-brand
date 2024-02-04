@@ -1,328 +1,255 @@
-
-	/*@name macbook_pro_16____1*/
-
-
-body
- { margin: 0px; padding: 0px; font-family:"Arial"; overflow-x:hidden; }
-
-
-img
- { position: absolute; display: block; margin: 0px; border: none; padding: 0px; }
-
-
-div
- { position: absolute; }
-
-#content-container { display: block; position: relative; width: 1728px; width: 1728px; height: 1117px; overflow: hidden; display: block;  margin-left: auto; margin-right: auto;  }
-
-
-#page_macbook_pro_16____1_ek1 {
-	top: 0px;
-	left: 0px;
-	width: 1728px;
-	height: 1117px;
+:root {
+  --default-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Ubuntu, "Helvetica Neue", Helvetica, Arial, "PingFang SC",
+    "Hiragino Sans GB", "Microsoft Yahei UI", "Microsoft Yahei",
+    "Source Han Sans CN", sans-serif;
 }
 
-#_bg__macbook_pro_16____1_ek2 {
-	top: 0px;
-	left: 0px;
-	width: 1728px;
-	height: 1117px;
-	background:rgba(40.22,41.97,83.94,1);
+.main-container {
+  overflow: hidden;
 }
 
-
-#kagingo_brian {
-	top: -35px;
-	left: 328px;
-	width: 1050px;
-	height: 288px;
-	overflow: hidden;
-	font-family: Inknut Antiqua;
-	font-size: 100px;
-	text-align: left;
-	-ms-text-shadow:1px 11px 10px rgba(49,198,231,0.6);
-	-o-text-shadow:1px 11px 10px rgba(49,198,231,0.6);
-	-webkit-text-shadow:1px 11px 10px rgba(49,198,231,0.6);
-	-moz-text-shadow:1px 11px 10px rgba(49,198,231,0.6);
-	text-shadow:1px 11px 10px rgba(49,198,231,0.6);
-	color:#31C6E7;
+.main-container,
+.main-container * {
+  box-sizing: border-box;
 }
 
-#frame_3 {
-	top: 313px;
-	left: 328px;
-	width: 400px;
-	height: 525px;
+input,
+select,
+textarea,
+button {
+  outline: 0;
 }
 
-#_bg__frame_3_ek1 {
-	top: -1px;
-	left: -1px;
-	width: 400px;
-	height: 525px;
-	-ms-border-radius: 50px;
-	-o-border-radius: 50px;
-	-moz-border-radius: 50px;
-	-webkit-border-radius: 50px;
-	border-radius: 50px;
-	border: 1px solid #0c4b60;
-	background:red;
+.main-container {
+  position: relative;
+  width: 1440px;
+  height: 1024px;
+  margin: 0 auto;
+  background: #cad2c5;
+  overflow: hidden;
 }
-
-
-#oip_1 {
-	top: 0px;
-	left: 0px;
-	width: 400px;
-	height: 525px;
+.flex-row-cac {
+  position: relative;
+  width: 257px;
+  height: 38px;
+  margin: 42px 0 0 1144px;
+  z-index: 7;
 }
-
-
-#i_m {
-	top: 282px;
-	left: 773px;
-	width: 247px;
-	height: 200px;
-	overflow: hidden;
-	font-family: Inknut Antiqua;
-	font-size: 100px;
-	font-weight: bold;
-	text-align: left;
-	color:#31C6E7;
+.sign-up {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: absolute;
+  height: 36px;
+  top: 0;
+  left: 153px;
+  color: #84a98c;
+  font-family: Inter, var(--default-font-family);
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 36px;
+  text-align: left;
+  white-space: nowrap;
+  z-index: 3;
 }
-
-
-#brian {
-	top: 376px;
-	left: 759px;
-	width: 388px;
-	height: 203px;
-	overflow: hidden;
-	font-family: Inknut Antiqua;
-	font-size: 100px;
-	font-weight: bold;
-	text-align: left;
-	color:#FF0000;
+.login {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: absolute;
+  height: 36px;
+  top: 2px;
+  left: 0;
+  color: #84a98c;
+  font-family: Inter, var(--default-font-family);
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 36px;
+  text-align: left;
+  white-space: nowrap;
+  z-index: 2;
 }
-
-
-#i_m_a_versatile_full_stack_developer_with_expertise_in_front_end_and_back_end_technologies__including_javascript__html__css__react__and_node_js__passionate_about_continuous_learning__my_ambition_is_to_expand_my_proficiency_across_various_programming_languages__i_possess_a_knack_for_adapting_quickly_to_new_programs__reflecting_my_commitment_to_staying_agile_in_the_dynamic_field_of_web_development_ {
-	top: 561px;
-	left: 759px;
-	width: 6888.5px;
-	height: 316.5px;
-	overflow: hidden;
-	font-family: Inknut Antiqua;
-	font-size: 15px;
-	font-weight: bold;
-	text-align: left;
-	color:#31C6E7;
+.line {
+  position: absolute;
+  width: 4px;
+  height: 26.078px;
+  top: 4.961px;
+  left: 118px;
+  background: url(./assets/images/4272f3c6-6a87-4f3d-a89f-c53c38f634bb.png)
+    no-repeat center;
+  background-size: cover;
+  z-index: 7;
 }
-
-#frame_4 {
-	top: 307px;
-	left: 90px;
-	width: 72px;
-	height: 72px;
+.ellipse {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  margin: 163px 0 0 630px;
+  background: url(skins/nigger.jpeg)
+    no-repeat center;
+  background-size: cover;
+  border-radius: 50%;
 }
-
-
-
-#mdi_account {
-	top: 0px;
-	left: 0px;
-	width: 72px;
-	height: 72px;
+.my-name-is {
+  display: block;
+  position: relative;
+  height: 36px;
+  margin: 8px 0 0 640px;
+  color: #84a98c;
+  font-family: Inter, var(--default-font-family);
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 36px;
+  text-align: left;
+  white-space: nowrap;
+  z-index: 1;
 }
-
-#vector {
-	top: 12px;
-	left: 12px;
-	width: 48px;
-	height: 48px;
+.kagingo-brian {
+  display: block;
+  position: relative;
+  height: 61px;
+  margin: 0 0 0 547px;
+  color: #84a98c;
+  font-family: Inter, var(--default-font-family);
+  font-size: 50px;
+  font-weight: 800;
+  line-height: 60.511px;
+  text-align: left;
+  white-space: nowrap;
+  z-index: 4;
 }
-
-#bi_person_workspace {
-	top: 621px;
-	left: 90px;
-	width: 72px;
-	height: 72px;
+.line-1 {
+  position: relative;
+  width: 404.078px;
+  height: 1px;
+  margin: 3px 0 0 548.961px;
+  background: url(./assets/images/ea59f25c-3105-49fb-819d-02f220aa056e.png)
+    no-repeat center;
+  background-size: cover;
+  z-index: 5;
 }
-
-
-
-#group {
-	top: 4.5px;
-	left: px;
-	width: 72px;
-	height: 67.5px;
+.programmer-web-designer {
+  display: block;
+  position: relative;
+  height: 36px;
+  margin: 4px 0 0 540px;
+  color: #84a98c;
+  font-family: Inter, var(--default-font-family);
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 36px;
+  text-align: left;
+  white-space: nowrap;
+  z-index: 6;
 }
-
-#_bg__group_ek1 {
-	top: -5px;
-	left: 0px;
-	width: 72px;
-	height: 67.5px;
-	background:#;
+.rectangle {
+  position: relative;
+  width: 1440px;
+  height: 121px;
+  margin: 311px 0 0 0;
+  background: rgba(82, 121, 111, 0.23);
+  z-index: 14;
 }
-
-
-#vector_ek1 {
-	top: 18px;
-	left: 14px;
-	width: 45px;
-	height: 49.28px;
+.contact {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: absolute;
+  height: 36px;
+  top: 53px;
+  left: 1223px;
+  color: #84a98c;
+  font-family: Inter, var(--default-font-family);
+  font-size: 30px;
+  font-weight: 800;
+  line-height: 36px;
+  text-align: left;
+  white-space: nowrap;
+  z-index: 14;
 }
-
-
-#vector_ek2 {
-	top: 0px;
-	left: 0px;
-	width: 72px;
-	height: 58.5px;
+.service {
+  position: absolute;
+  width: 131px;
+  height: 36px;
+  top: 53px;
+  left: 787px;
+  cursor: pointer;
+  color: #84a98c;
+  font-family: Inter, var(--default-font-family);
+  font-size: 30px;
+  font-weight: 800;
+  line-height: 36px;
+  white-space: nowrap;
+  background: transparent;
+  border: none;
+  z-index: 10;
 }
-
-#teenyicons_phone_solid {
-	top: 749px;
-	left: 90px;
-	width: 72px;
-	height: 72px;
+.about {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: absolute;
+  height: 36px;
+  top: 53px;
+  left: 307px;
+  color: #84a98c;
+  font-family: Inter, var(--default-font-family);
+  font-size: 30px;
+  font-weight: 800;
+  line-height: 36px;
+  text-align: left;
+  white-space: nowrap;
+  z-index: 11;
 }
-
-
-
-
-#vector_ek3 {
-	top: 0px;
-	left: 0px;
-	width: 72px;
-	height: 72px;
+.skills {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: absolute;
+  height: 36px;
+  top: 53px;
+  left: 566px;
+  color: #84a98c;
+  font-family: Inter, var(--default-font-family);
+  font-size: 30px;
+  font-weight: 800;
+  line-height: 36px;
+  text-align: left;
+  white-space: nowrap;
+  z-index: 12;
 }
-
-#streamline_wrench_solid {
-	top: 448px;
-	left: 90px;
-	width: 72px;
-	height: 72px;
+.home {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: absolute;
+  height: 36px;
+  top: 53px;
+  left: 98px;
+  color: #84a98c;
+  font-family: Inter, var(--default-font-family);
+  font-size: 30px;
+  font-weight: 800;
+  line-height: 36px;
+  text-align: left;
+  white-space: nowrap;
+  z-index: 9;
 }
-
-
-
-
-#vector_ek4 {
-	top: 0.02px;
-	left: 0.11px;
-	width: 71.77px;
-	height: 71.97px;
+.blog {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: absolute;
+  height: 36px;
+  top: 53px;
+  left: 1035px;
+  color: #84a98c;
+  font-family: Inter, var(--default-font-family);
+  font-size: 30px;
+  font-weight: 800;
+  line-height: 36px;
+  text-align: left;
+  white-space: nowrap;
+  z-index: 13;
 }
-
-#frame_5 {
-	top: 485px;
-	left: 1606px;
-	width: 72px;
-	height: 204px;
-}
-
-#_bg__frame_5_ek1 {
-	top: 0px;
-	left: 0px;
-	width: 72px;
-	height: 204px;
-	background:#;
-}
-
-#streamline_instagram_solid {
-	top: 0px;
-	left: 0px;
-	width: 72px;
-	height: 72px;
-}
-
-#_bg__streamline_instagram_solid_ek1 {
-	top: 0px;
-	left: 0px;
-	width: 72px;
-	height: 72px;
-	background:#;
-}
-
-
-#vector_ek5 {
-	top: 4.05px;
-	left: 4.04px;
-	width: 70.49px;
-	height: 67.95px;
-}
-
-#ep_coffee {
-	top: 132px;
-	left: 0px;
-	width: 72px;
-	height: 72px;
-}
-
-#_bg__ep_coffee_ek1 {
-	top: 0px;
-	left: 0px;
-	width: 72px;
-	height: 72px;
-	
-}
-
-#fa6_brands_github {
-	top: -282px;
-	left: 0px;
-	width: 94px;
-	height: 88px;
-}
-
-#_bg__fa6_brands_github {
-	top: 0px;
-	left: 0px;
-	width: 94px;
-	height: 88px;
-
-}
-
-
-#vector_ek6 {
-	top: 1.38px;
-	left: 0px;
-	width: 72px;
-	height: 72px;
-}
-
-
-#vector_ek7 {
-	top: 0px;
-	left: 0px;
-	width: 72px;
-	height: 54px;
-}
-
-
-#vector_ek8 {
-	top: 762px;
-	left: 1606px;
-	width: 72px;
-	height: 72px;
-}
-
-
-#hire_me {
-	top: 861px;
-	left: 789px;
-	width: 298px;
-	height: 144px;
-	overflow: hidden;
-	font-family: Inknut Antiqua;
-	font-size: 50px;
-	font-weight: bold;
-	text-align: left;
-	color:#31C6E7;
-}
-
-
-
-
