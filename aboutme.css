@@ -51,7 +51,7 @@
     height: 390px;
     top: 0;
     left: 0;
-    background: url(./assets/images/1523cbc73cc6073c88a3b24e1a690953b5eb9f55.png)
+    background: url(skins/nigger.2.png)
       no-repeat center;
     background-size: cover;
     z-index: 10;
@@ -286,14 +286,12 @@
     z-index: 16;
     border-radius: 10px;
   }
-  .img-2 {
+   {
     position: absolute;
-    width: 60px;
-    height: 60px;
-    top: 6px;
-    left: 82px;
-    background: url(./assets/images/039c7e5c-97cc-4bdf-99e7-8e6e79ed167d.png)
-      no-repeat center;
+    width: 50px;
+    height: 50px;
+    top: 9px;
+    left: 100px;
     background-size: cover;
     z-index: 18;
     overflow: hidden;
@@ -477,4 +475,6 @@
     text-align: left;
     z-index: 2;
   }
-  
+  a{
+    text-decoration: none;
+  }

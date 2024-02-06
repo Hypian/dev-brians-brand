@@ -61,11 +61,11 @@
     z-index: 1;
   }
   .group {
-    position: relative;
+  
     width: 791px;
     height: 94px;
     margin: 69px 0 0 319px;
-    background: #84a98c;
+    background: white;
     z-index: 2;
   }
   .text-3 {
@@ -305,4 +305,38 @@
     white-space: nowrap;
     z-index: 18;
   }
-  
+  ::placeholder{
+    font-size: 40px;
+    color: #cad2c5;
+    
+  }
+  input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  height: 95px;
+  border:white
+}
+
+input[type="submit"] {
+  background-color: #4CAF50;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #45a049;
+}
+form{
+
+    height: 95px;
+}
+a{
+    text-decoration: none;
+}
