@@ -255,7 +255,7 @@
     position: absolute;
     height: 36px;
     top: 29px;
-    left: 877px;
+    left: 700px;
     color: #84a98c;
     font-family: Inter, var(--default-font-family);
     font-size: 30px;
@@ -264,6 +264,7 @@
     text-align: left;
     white-space: nowrap;
     z-index: 4;
+    
   }
   .box-3 {
     position: absolute;
@@ -319,7 +320,7 @@
     position: absolute;
     height: 36px;
     top: 42px;
-    left: 884px;
+    left: 700px;
     color: #84a98c;
     font-family: Inter, var(--default-font-family);
     font-size: 30px;
@@ -348,7 +349,7 @@
     position: absolute;
     height: 36px;
     top: 132px;
-    left: 858px;
+    left: 700px;
     color: #84a98c;
     font-family: Inter, var(--default-font-family);
     font-size: 30px;
@@ -377,7 +378,7 @@
     position: absolute;
     height: 36px;
     top: 244px;
-    left: 862px;
+    left: 700px;
     color: #84a98c;
     font-family: Inter, var(--default-font-family);
     font-size: 30px;
@@ -524,5 +525,19 @@ position:absolute;
   }
   input[type="name"]::placeholder{
     color: #cad2c5;
+  }
+  input[type="submit"]{
+    width: 180px;
+  height:50px;
+    position:absolute;
+    color: #cad2c5;
+    border: none;
+    border-radius: 10px;
+    text-align: center;
+    background-color: #84a98c;
+    font-size: 30px;
+    cursor: pointer;
+    transform: translateY(425px);
+    left: 140px;
   }
  

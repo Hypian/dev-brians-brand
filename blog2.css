@@ -332,3 +332,20 @@
   a{
     text-decoration: none;
   }
+  input[type="submit"]{
+    width: 520px;
+  height:55px;
+    position:absolute;
+    color: #cad2c5;
+    border: none;
+    border-radius: 10px;
+    text-align: center;
+    background-color:#84a98c;
+    font-size: 30px;
+    cursor: pointer;
+    transform: translateY(565px);
+    left: 300px;
+  }
+ input[type="text"]{
+  
+ }
