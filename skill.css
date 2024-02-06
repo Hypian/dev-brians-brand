@@ -29,14 +29,14 @@
     background: #cad2c5;
     overflow: hidden;
   }
-  .flex-row-af {
+  .group {
     position: relative;
     width: 535px;
     height: 121px;
     margin: 41px 0 0 436px;
     z-index: 1;
   }
-  .my-skills {
+  .text {
     display: flex;
     align-items: flex-start;
     justify-content: flex-start;
@@ -52,25 +52,25 @@
     text-align: left;
     white-space: nowrap;
   }
-  .line {
+  .img {
     position: absolute;
     width: 522.016px;
     height: 1px;
     top: 120px;
     left: 0;
-    background: url(./assets/images/edb8fb23-ca23-40f8-ab08-306aa1029472.png)
+    background: url(./assets/images/67707301-812d-4dd5-b5e6-188858622e32.png)
       no-repeat center;
     background-size: cover;
     z-index: 1;
   }
-  .flex-row-dd {
+  .group-2 {
     position: relative;
     width: 959px;
     height: 78px;
     margin: 59px 0 0 167px;
     z-index: 30;
   }
-  .javascript {
+  .text-2 {
     display: flex;
     align-items: flex-start;
     justify-content: flex-start;
@@ -87,7 +87,7 @@
     white-space: nowrap;
     z-index: 2;
   }
-  .react-js {
+  .text-3 {
     display: flex;
     align-items: flex-start;
     justify-content: center;
@@ -105,84 +105,84 @@
     white-space: nowrap;
     z-index: 22;
   }
-  .skill-icons-javascript {
+  .img-2 {
     position: absolute;
     width: 60px;
     height: 60px;
     top: 18px;
     left: 0;
-    background: url(./assets/images/95125f97-552b-4f31-9b18-e083618eb87d.png)
+    background: url(./assets/images/d50f52c1-aad1-4da4-8652-7dd7d1def77e.png)
       no-repeat center;
     background-size: cover;
     z-index: 26;
     overflow: hidden;
   }
-  .skill-icons-react-dark {
+  .pic {
     position: absolute;
     width: 60px;
     height: 60px;
     top: 18px;
     left: 668px;
-    background: url(./assets/images/d8a000cb-35f5-4a6c-b525-49a9af108422.png)
+    background: url(./assets/images/da17a863-0b83-45ad-ad71-75df1b223905.png)
       no-repeat center;
     background-size: cover;
     z-index: 30;
     overflow: hidden;
   }
-  .flex-row {
+  .wrapper {
     position: relative;
     width: 969px;
     margin: 13px 0 0 264px;
     z-index: 14;
   }
-  .line-1 {
+  .img-3 {
     position: absolute;
     width: 180px;
     top: 0;
     left: 0;
-    background: url(./assets/images/3de997a9-eaf9-4eb8-afbf-3af61a8a6d41.png)
+    background: url(./assets/images/525a4abe-62ff-4e8b-8259-2848077b3d7c.png)
       no-repeat center;
     background-size: cover;
     z-index: 3;
   }
-  .line-2 {
+  .img-4 {
     position: absolute;
     width: 120px;
     top: 0;
     left: 172px;
-    background: url(./assets/images/0915d8d2-5624-487b-aa2d-50d83b30760b.png)
+    background: url(./assets/images/c8510732-93f2-457a-9572-4f5b912da5fa.png)
       no-repeat center;
     background-size: cover;
     z-index: 4;
   }
-  .line-3 {
+  .pic-2 {
     position: absolute;
     width: 120px;
     top: 0;
     left: 672px;
-    background: url(./assets/images/0df15097-0799-4329-98a4-64443877cfaf.png)
+    background: url(./assets/images/8860063c-c5d4-4b8c-ba0d-cfa69c902bd9.png)
       no-repeat center;
     background-size: cover;
     z-index: 11;
   }
-  .line-4 {
+  .img-5 {
     position: absolute;
     width: 180px;
     top: 0;
     left: 789px;
-    background: url(./assets/images/594e0189-754c-484d-90e6-ac2c506e4423.png)
+    background: url(./assets/images/bdbb844f-e4d7-40f1-8af9-cd540bf4a22e.png)
       no-repeat center;
     background-size: cover;
     z-index: 14;
   }
-  .flex-row-d {
+  .wrapper-2 {
     position: relative;
     width: 907px;
     height: 66px;
     margin: 63px 0 0 154px;
     z-index: 32;
   }
-  .html {
+  .text-4 {
     display: flex;
     align-items: flex-start;
     justify-content: flex-start;
@@ -199,7 +199,7 @@
     white-space: nowrap;
     z-index: 19;
   }
-  .figma {
+  .text-5 {
     display: flex;
     align-items: flex-start;
     justify-content: center;
@@ -217,96 +217,96 @@
     white-space: nowrap;
     z-index: 23;
   }
-  .skill-icons-html {
+  .pic-3 {
     position: absolute;
     width: 60px;
     height: 60px;
     top: 6px;
     left: 0;
-    background: url(./assets/images/d1c1e44f-569d-4b4c-ad1a-c04493598a44.png)
+    background: url(./assets/images/d64a365b-8606-4b5c-ba1d-d60bf4842e6c.png)
       no-repeat center;
     background-size: cover;
     z-index: 32;
     overflow: hidden;
   }
-  .skill-icons-figma-light {
+  .pic-4 {
     position: absolute;
     width: 60px;
     height: 60px;
     top: 6px;
     left: 681px;
-    background: url(./assets/images/72327d87-f116-4151-9d89-e153a99f90eb.png)
+    background: url(./assets/images/5f2b3cac-488c-465b-aac3-b0052d4dc36d.png)
       no-repeat center;
     background-size: cover;
     z-index: 29;
     overflow: hidden;
   }
-  .flex-row-5 {
+  .section {
     position: relative;
     width: 967px;
     margin: 15px 0 0 262px;
     z-index: 15;
   }
-  .line-6 {
+  .img-6 {
     position: absolute;
     width: 225px;
     top: 0;
     left: 0;
-    background: url(./assets/images/5780f7bf-bb06-445b-b3e2-6606fe02cedb.png)
+    background: url(./assets/images/4eec9e20-8c3b-49ee-918a-3362ccf38371.png)
       no-repeat center;
     background-size: cover;
     z-index: 5;
   }
-  .line-7 {
+  .pic-5 {
     position: absolute;
     width: 75px;
     top: 0;
     left: 233px;
-    background: url(./assets/images/786ebe97-e36d-4f31-ad6c-3209983ae8f1.png)
+    background: url(./assets/images/082d503f-0d6f-40eb-919b-981ec1cadda2.png)
       no-repeat center;
     background-size: cover;
     z-index: 8;
   }
-  .line-8 {
+  .pic-6 {
     position: absolute;
     width: 120px;
     top: 0;
     left: 670px;
-    background: url(./assets/images/63d26992-e838-4419-b901-f088f3d06388.png)
+    background: url(./assets/images/28b97aa4-161e-4ec3-83af-a42a280ee81e.png)
       no-repeat center;
     background-size: cover;
     z-index: 12;
   }
-  .line-9 {
+  .img-7 {
     position: absolute;
     width: 180px;
     top: 0;
     left: 787px;
-    background: url(./assets/images/fc6d5a0b-3b67-46f7-ba6d-083fdd15a580.png)
+    background: url(./assets/images/cf3bc22e-6bd6-456f-97f7-1791aeb94b06.png)
       no-repeat center;
     background-size: cover;
     z-index: 15;
   }
-  .flex-row-d-a {
+  .wrapper-3 {
     position: relative;
     width: 838px;
     height: 64px;
     margin: 64px 0 0 153px;
     z-index: 33;
   }
-  .skill-icons-css {
+  .pic-7 {
     position: absolute;
     width: 60px;
     height: 60px;
     top: 0;
     left: 0;
-    background: url(./assets/images/8ac5d6fe-5bcd-41de-98dd-e23ddfe75267.png)
+    background: url(./assets/images/baec43ee-0bf4-41fb-ad82-9723d73665bc.png)
       no-repeat center;
     background-size: cover;
     z-index: 31;
     overflow: hidden;
   }
-  .regroup {
+  .box {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -317,18 +317,18 @@
     left: 692px;
     z-index: 33;
   }
-  .logos-c-sharp {
+  .pic-8 {
     flex-shrink: 0;
     position: relative;
     width: 64px;
     height: 64px;
-    background: url(./assets/images/46b6cb07-69ad-45e0-a4e4-e124fd09f1d8.png)
+    background: url(./assets/images/07eb2a7f-8548-4626-ade3-2e08a2cd3b47.png)
       no-repeat center;
     background-size: cover;
     z-index: 33;
     overflow: hidden;
   }
-  .c-sharp {
+  .text-6 {
     display: flex;
     align-items: flex-start;
     justify-content: center;
@@ -345,7 +345,7 @@
     white-space: nowrap;
     z-index: 24;
   }
-  .css {
+  .text-7 {
     display: flex;
     align-items: flex-start;
     justify-content: flex-start;
@@ -362,71 +362,71 @@
     white-space: nowrap;
     z-index: 20;
   }
-  .flex-row-a {
+  .wrapper-4 {
     position: relative;
     width: 961px;
     margin: 14px 0 0 262px;
     z-index: 16;
   }
-  .line-b {
+  .pic-9 {
     position: absolute;
     width: 225px;
     top: 0;
     left: 0;
-    background: url(./assets/images/2ad21732-9be4-4fdb-9925-040cab1b38cf.png)
+    background: url(./assets/images/2cbefc8c-355b-422d-a058-d8b2daea4118.png)
       no-repeat center;
     background-size: cover;
     z-index: 6;
   }
-  .line-c {
+  .pic-a {
     position: absolute;
     width: 75px;
     top: 0;
     left: 233px;
-    background: url(./assets/images/36655660-7a5f-4da9-acd8-1e3a40b7605d.png)
+    background: url(./assets/images/c308a8d7-607a-46b9-9cb0-3198d2ce26ed.png)
       no-repeat center;
     background-size: cover;
     z-index: 9;
   }
-  .line-d {
+  .img-8 {
     position: absolute;
     width: 120px;
     top: 0;
     left: 664px;
-    background: url(./assets/images/141aaee4-d32f-4dd7-a26e-1a6dbd9e29b7.png)
+    background: url(./assets/images/dc5fbf8c-df6d-4327-a6d8-6290df115b11.png)
       no-repeat center;
     background-size: cover;
     z-index: 13;
   }
-  .line-e {
+  .pic-b {
     position: absolute;
     width: 180px;
     top: 0;
     left: 781px;
-    background: url(./assets/images/f9efed6f-9775-4ebb-b6dd-4283beb8c97c.png)
+    background: url(./assets/images/e2e9e7a1-ed52-4af5-b1c2-1b35a424cd3e.png)
       no-repeat center;
     background-size: cover;
     z-index: 16;
   }
-  .flex-row-ab {
+  .wrapper-5 {
     position: relative;
     width: 912px;
     height: 60px;
     margin: 45px 0 0 144px;
     z-index: 28;
   }
-  .group {
+  .img-9 {
     position: absolute;
     width: 11.73%;
     height: 100%;
     top: 0;
     left: 0;
-    background: url(./assets/images/a0f7d376-ed95-4792-b51c-2273a896dbf9.png)
+    background: url(./assets/images/501b4629-6ae2-4bb0-bd96-1aec6cc6deac.png)
       no-repeat center;
     background-size: 100% 100%;
     z-index: 27;
   }
-  .regroup-f {
+  .section-2 {
     position: absolute;
     width: 207px;
     height: 60px;
@@ -434,19 +434,19 @@
     left: 705px;
     z-index: 28;
   }
-  .skill-icons-unity-dark {
+  .img-a {
     position: absolute;
     width: 60px;
     height: 60px;
     top: 0;
     left: 0;
-    background: url(./assets/images/dfb755d1-4247-4b85-8449-729d97f2eaac.png)
+    background: url(./assets/images/590b2f70-cc44-4203-aa6c-7fde406ca568.png)
       no-repeat center;
     background-size: cover;
     z-index: 28;
     overflow: hidden;
   }
-  .unity {
+  .text-8 {
     display: flex;
     align-items: flex-start;
     justify-content: center;
@@ -464,7 +464,7 @@
     white-space: nowrap;
     z-index: 25;
   }
-  .node-js {
+  .text-9 {
     display: flex;
     align-items: flex-start;
     justify-content: flex-start;
@@ -481,53 +481,53 @@
     white-space: nowrap;
     z-index: 21;
   }
-  .flex-row-c {
+  .wrapper-6 {
     position: relative;
     width: 959px;
     margin: 32px 0 0 262px;
     z-index: 18;
   }
-  .line-10 {
+  .img-b {
     position: absolute;
     width: 225px;
     top: 0;
     left: 0;
-    background: url(./assets/images/76bac430-0e47-46ce-a2ef-29b050836203.png)
+    background: url(./assets/images/8f06a657-7f37-4d68-996e-b0e7cb26136f.png)
       no-repeat center;
     background-size: cover;
     z-index: 7;
   }
-  .line-11 {
+  .pic-c {
     position: absolute;
     width: 75px;
     top: 0;
     left: 233px;
-    background: url(./assets/images/ff07ebfb-b57c-4302-be79-3cbaaee77d35.png)
+    background: url(./assets/images/848d3483-471a-419e-a1f8-5fd64c80dfd0.png)
       no-repeat center;
     background-size: cover;
     z-index: 10;
   }
-  .line-12 {
+  .pic-d {
     position: absolute;
     width: 150px;
     top: 0;
     left: 664px;
-    background: url(./assets/images/5dafa6a9-a86b-44f2-87a0-dac704b37e06.png)
+    background: url(./assets/images/d1aa42ed-1f54-4350-a62a-d204e8bc690b.png)
       no-repeat center;
     background-size: cover;
     z-index: 17;
   }
-  .line-13 {
+  .img-c {
     position: absolute;
     width: 150px;
     top: 0;
     left: 809px;
-    background: url(./assets/images/84865457-add8-4455-b636-dca8f9242632.png)
+    background: url(./assets/images/6fefb793-4e67-47a6-9c2a-ce8e52e5be3a.png)
       no-repeat center;
     background-size: cover;
     z-index: 18;
   }
-  .rectangle {
+  .section-3 {
     position: relative;
     width: 1440px;
     height: 121px;
@@ -535,7 +535,7 @@
     background: rgba(82, 121, 111, 0.23);
     z-index: 40;
   }
-  .contact {
+  .text-a {
     display: flex;
     align-items: flex-start;
     justify-content: flex-start;
@@ -552,7 +552,7 @@
     white-space: nowrap;
     z-index: 40;
   }
-  .services {
+  .text-b {
     display: flex;
     align-items: flex-start;
     justify-content: flex-start;
@@ -569,7 +569,7 @@
     white-space: nowrap;
     z-index: 36;
   }
-  .about {
+  .text-c {
     display: flex;
     align-items: flex-start;
     justify-content: flex-start;
@@ -586,7 +586,7 @@
     white-space: nowrap;
     z-index: 37;
   }
-  .skills-14 {
+  .text-d {
     display: flex;
     align-items: flex-start;
     justify-content: flex-start;
@@ -603,7 +603,7 @@
     white-space: nowrap;
     z-index: 38;
   }
-  .home {
+  .text-e {
     display: flex;
     align-items: flex-start;
     justify-content: flex-start;
@@ -620,7 +620,7 @@
     white-space: nowrap;
     z-index: 35;
   }
-  .blog {
+  .text-f {
     display: flex;
     align-items: flex-start;
     justify-content: flex-start;
