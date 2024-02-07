@@ -72,17 +72,7 @@ button {
   white-space: nowrap;
   z-index: 2;
 }
-.line {
-  position: absolute;
-  width: 4px;
-  height: 26.078px;
-  top: 4.961px;
-  left: 118px;
-  background: url(./assets/images/4272f3c6-6a87-4f3d-a89f-c53c38f634bb.png)
-    no-repeat center;
-  background-size: cover;
-  z-index: 7;
-}
+
 .ellipse {
   position: relative;
   width: 200px;
@@ -122,14 +112,12 @@ button {
   z-index: 4;
 }
 .line-1 {
-  position: relative;
-  width: 404.078px;
-  height: 1px;
-  margin: 3px 0 0 548.961px;
-  background: url(./assets/images/ea59f25c-3105-49fb-819d-02f220aa056e.png)
-    no-repeat center;
-  background-size: cover;
-  z-index: 5;
+  .horizontal-line {
+    width: 100%; /* Adjust the width as needed */
+    height: 1px; /* Adjust the thickness of the line */
+    background-color: black; /* Adjust the color of the line */
+    margin: 20px 0; /* Adjust the margin to add space above and below the line */
+  }
 }
 .programmer-web-designer {
   display: block;
@@ -265,4 +253,6 @@ a{
   color:#84a98c ;
   text-decoration: none;
 }
+
+
 
