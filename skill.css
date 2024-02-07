@@ -637,4 +637,7 @@
     white-space: nowrap;
     z-index: 39;
   }
+  a{
+    text-decoration: none;
+  }
   

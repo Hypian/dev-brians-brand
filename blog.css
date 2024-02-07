@@ -507,4 +507,7 @@
     white-space: nowrap;
     z-index: 5;
   }
+  a{
+    text-decoration: none;
+  }
   

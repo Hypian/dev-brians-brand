@@ -373,4 +373,7 @@
     text-align: center;
     z-index: 14;
   }
+  a{
+    text-decoration: none;
+  }
   
