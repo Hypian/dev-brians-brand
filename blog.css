@@ -55,21 +55,21 @@
   }
   .wrapper {
     position: absolute;
-    width: 104px;
-    height: 88px;
+    width: 100px;
+    height: px;
     top: 8px;
     left: 668px;
     background: #84a98c;
     z-index: 14;
     border-radius: 20px;
+    text-decoration: none;
+    
   }
   .pic {
     position: relative;
     width: 50px;
     height: 50px;
     margin: 15px 0 0 27px;
-    background: url(./assets/images/3f66ce19-5078-4e90-b035-6e1a5e2f0a88.png)
-      no-repeat center;
     background-size: cover;
     z-index: 15;
     overflow: hidden;
@@ -87,8 +87,6 @@
     height: 60px;
     top: 0;
     left: 453px;
-    background: url(./assets/images/3afdf1d1-c6bd-460a-bc86-a53e47548d0c.png)
-      no-repeat center;
     background-size: cover;
     z-index: 30;
     border-radius: 50%;
@@ -116,7 +114,7 @@
     height: 299px;
     top: 9px;
     left: 0;
-    background: url(./assets/images/545eebaa-281c-47e7-944f-b081d63cab99.png)
+    background: url(skins/js1.jpg)
       no-repeat center;
     background-size: cover;
     z-index: 10;
@@ -128,8 +126,6 @@
     height: 12.7%;
     top: 3.47%;
     left: 37.43%;
-    background: url(./assets/images/3d0bdb7d-4810-481a-9573-a68a64fda2b7.png)
-      no-repeat center;
     background-size: 100% 100%;
     z-index: 31;
   }
@@ -145,7 +141,7 @@
     color: #84a98c;
     font-family: Inter, var(--default-font-family);
     font-size: 30px;
-    font-weight: 900;
+    font-weight: 90px;
     line-height: 36px;
     text-align: left;
     z-index: 12;
@@ -231,7 +227,7 @@
     height: 6.17%;
     top: 89.61%;
     left: 57.77%;
-    background: url(./assets/images/2c7e2100-ab77-4259-99f7-9e39e57b0909.png)
+    background: url()
       no-repeat center;
     background-size: 100% 100%;
     z-index: 20;
@@ -289,7 +285,7 @@
     height: 299px;
     top: 19px;
     left: 0;
-    background: url(./assets/images/3956a399-e2c7-450b-a8d3-ea4bc1d6b930.png)
+    background: url(skins/hmtl.jpg)
       no-repeat center;
     background-size: cover;
     z-index: 11;
@@ -307,7 +303,7 @@
     color: #84a98c;
     font-family: Inter, var(--default-font-family);
     font-size: 30px;
-    font-weight: 900;
+    font-weight: 90;
     line-height: 36px;
     text-align: left;
     z-index: 13;
@@ -510,4 +506,9 @@
   a{
     text-decoration: none;
   }
-  
+  .wrapper,a{
+    font-size: 20px;
+    color: #CAD2C5;
+    text-align: center;
+    ;
+  }

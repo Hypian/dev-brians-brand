@@ -473,16 +473,56 @@
     white-space: nowrap;
     z-index: 23;
   }
-  .box-5 {
-    position: absolute;
-    width: 98px;
-    height: 30px;
-    top: 398px;
-    left: 194px;
-    background: #84a98c;
-    z-index: 22;
-    border-radius: 10px;
-  }
+ 
   a{
     text-decoration: none;
   }
+  input[type="text"] {
+position:absolute;
+    height: 380px;
+    width: 480px; 
+    top: 30px;
+    border-radius: 10px;
+    border: none;
+    background-color:#84a98c;
+    font-size: 30px;
+    color: #cad2c5;
+    text-indent: 29px;
+
+  }
+ input[type="text"]::placeholder{
+    color:#cad2c5;
+  
+   transform: translateY(-150px);
+   font-size:30px;
+  }
+  input[type="email"]{
+    height: 50px;
+    width: 480px;
+    padding-bottom: 10px;
+    border-radius: 10px;
+    border: none;
+    background-color:#84a98c ;
+    top: 30px;
+    font-size: 30px;
+    text-indent: 29px;
+    color: #cad2c5;
+  }
+  input[type="email"]::placeholder{
+    color: #cad2c5;
+  }
+  input[type="name"]{
+    height: 60px;
+    width: 483px;
+    border-radius: 10px;
+    border: none;
+    background-color: #84a98c;
+    top: 30px;
+    font-size: 30px;
+    text-indent: 29px;
+    color: #cad2c5;
+  }
+  input[type="name"]::placeholder{
+    color: #cad2c5;
+  }
+ 
