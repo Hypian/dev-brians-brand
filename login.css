@@ -329,4 +329,57 @@
   a{
     text-decoration: none;
   }
-  
+input[type="email"]{
+  width: 704px;
+  height: 100px;
+  border-radius: 1px;
+  border: none;
+  background-color: #84a98c;
+  color: #cad2c5;
+  font-size: 30px;
+}
+input[type="email"]::placeholder{
+  color: #cad2c5;
+}
+input[type="password"]{
+  width: 704px;
+  height: 100px;
+  border: none;
+  background-color: #84a98c;
+  color: #cad2c5;
+  font-size: 30px;
+}
+input[type="password"]::placeholder{
+  color: #cad2c5;
+}
+.box input[type="submit"]{
+  width: 240px;
+height:80px;
+  position:absolute;
+  color: #cad2c5;
+  border: none;
+  border-radius: 10px;
+  text-align: center;
+  background-color: #84a98c;
+  font-size: 30px;
+  cursor: pointer;
+  transform: translateY(-40px);
+  left: 0px;
+}
+.box input[type="submit"]:hover {
+  background-color: #52796F; /* Change background color on hover */
+}
+.text-6{
+  text-decoration: underline;
+  left: 389px;
+  transform: translateY(30px);
+}
+input[type="checkbox"]{
+  left: 20px;
+  text-align: left;
+transform: translateX(-1100px);
+
+}
+input[type="password"]::-webkit-input-placeholder::after {
+  content: "👁️";
+}
