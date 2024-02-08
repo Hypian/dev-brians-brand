@@ -316,18 +316,25 @@ textarea {
   width: 100%;
   padding: 10px;
   margin-bottom: 10px;
-  border-radius: 4px;
+  border-radius: 0%;
   box-sizing: border-box;
   height: 95px;
-  border:white
+border: none;
+background-color: #84a98c;
+font-size: 30px;
+color: #cad2c5;
 }
 
 input[type="submit"] {
-  background-color: #4CAF50;
+  background-color:#84a98c;
   padding: 10px 15px;
   border: none;
   border-radius: 4px;
   cursor: pointer;
+  width: 231px;
+  height: 66px;
+  font-size: 30px;
+  color: #cad2c5;
 }
 
 input[type="submit"]:hover {
@@ -339,4 +346,17 @@ form{
 }
 a{
     text-decoration: none;
+}
+input[type="password"]{
+  width:100% ;
+  padding: 10px;
+  height: 95px;
+  box-sizing: border-box;
+  border: none;
+  font-size: 30px;
+  background-color: #84a98c;
+  color: #cad2c5;;
+}
+input[type="password"]::placeholder{
+  color: #cad2c5;
 }
