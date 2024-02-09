@@ -45,23 +45,21 @@ a {
   /* border: 2px solid blue; */
 }
 
-.title-rem {
-  font-size: 2rem;
-  /* font-weight: 700; */
-  /* font-family: var(--alt-font-family); */
+.title {
+  font-size: 5rem;
+  font-family: var(--alt-font-family);
 }
 
-.subtitle-rem {
-  font-size: 32px;
-  /* font-weight: 500; */
+.subtitle {
+  font-size: 1.5rem;
+  font-weight: 300;
   text-transform: uppercase;
 }
 
+/* ----- Index Styling --- */
 /* === HEADER STYLING === */
 .header {
-  /* border: 2px solid blue; */
   min-height: 10vh;
-  padding: 25px;
 
   display: flex;
   flex-direction: row;
@@ -77,21 +75,57 @@ a {
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 20px;
+  gap: 2rem;
+  padding: 1.2rem;
 }
 
 .user-auth a {
-  font-size: 24px;
+  padding: 0.5rem;
+  font-size: 1.5rem;
   font-weight: 700;
 }
 
 .user-auth a:hover {
-  border-bottom: 3px solid #84a98c;
+  border-bottom: 3px solid var(--secondary-color);
+  color: var(--secondary-color);
 }
 
 .separator-line {
-  padding-top: 30px;
-  border: 1px solid #84a98c;
+  padding-top: 2.4rem;
+  border: 2px solid var(--secondary-color);
+}
+
+/* ==section intro  == */
+.intro-section {
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  padding: 100px 0;
+}
+
+.profile-img {
+  display: block;
+  width: 250px;
+  border-radius: 50%;
+}
+
+.intro-text {
+  text-align: center;
+}
+
+.intro-text h1 {
+  font-size: 5rem;
+}
+
+.intro-text h1,
+.intro-text h2 {
+  margin-bottom: 10px;
+}
+
+.intro-text hr {
+  border: 1px solid var(--slate-500);
 }
 
 /* === NAVIGATION BAR STYLING === */
@@ -106,53 +140,19 @@ a {
 }
 
 .nav-links {
-  font-size: 24px;
+  font-size: 2rem;
   font-weight: 700;
 }
 
 .nav-links:hover {
-  border-bottom: 3px solid #84a98c;
+   border-bottom: 3px solid var(--secondary-color);
+  color: var(--secondary-color);
 }
 
 .nav-links-active {
-  border-bottom: 3px solid #84a98c;
+   border-bottom: 3px solid var(--secondary-color);
+  color: var(--secondary-color);
 }
-
-/* == Index page styling == */
-.intro-section {
-  min-height: 80vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 30px;
-  padding: 100px 0;
-
-  /* border: 2px solid red; */
-}
-
-.profile-img {
-  display: block;
-  width: 250px;
-  border-radius: 50%;
-}
-
-.intro-text {
-  text-align: center;
-}
-
-.intro-text h1 {
-  font-size: 48px;
-}
-
-.intro-text h1,
-.intro-text h2 {
-  margin-bottom: 10px;
-}
-
-.intro-text hr {
-  border: 1px solid #afc2b0;
-}
-
 /* -- --=== RESPONSIVENESS ===-- --- */
 @media (max-width: 1280px) {
   .container {
@@ -224,7 +224,7 @@ a {
   }
 
   .menu-bar {
-    font-size: 24px;
+    font-size: 2rem;
   }
 
   .user-auth a {
