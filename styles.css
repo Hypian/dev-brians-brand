@@ -1,0 +1,285 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #cad2c5;
+  font-family: sans-serif;
+  height: 100vh;
+
+  color: #84a98c;
+}
+
+a {
+  text-decoration: none;
+  color: #84a98c;
+}
+
+.container {
+  width: 100%;
+  min-width: 1536px;
+  margin: auto 0;
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+
+  /* border: 2px solid blue; */
+}
+
+.title {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.subtitle {
+  font-size: 24px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+/* === HEADER STYLING === */
+.header {
+  /* border: 2px solid blue; */
+  min-height: 10vh;
+  padding: 25px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.menu-bar {
+  display: none;
+}
+
+.user-auth {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+}
+
+.user-auth a {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.user-auth a:hover {
+  border-bottom: 3px solid #84a98c;
+}
+
+.separator-line {
+  padding-top: 30px;
+  border: 1px solid #84a98c;
+}
+
+/* === NAVIGATION BAR STYLING === */
+.nav-bar {
+  /* border: 2px solid green; */
+  min-height: 10vh;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 30px;
+}
+
+.nav-links {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.nav-links:hover {
+  border-bottom: 3px solid #84a98c;
+}
+
+.nav-links-active {
+  border-bottom: 3px solid #84a98c;
+}
+
+/* == Index page styling == */
+.intro-section {
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  padding: 100px 0;
+
+  /* border: 2px solid red; */
+}
+
+.profile-img {
+  display: block;
+  width: 250px;
+  border-radius: 50%;
+}
+
+.intro-text {
+  text-align: center;
+}
+
+.intro-text h1 {
+  font-size: 48px;
+}
+
+.intro-text h1,
+.intro-text h2 {
+  margin-bottom: 10px;
+}
+
+.intro-text hr {
+  border: 1px solid #afc2b0;
+}
+
+/* -- --=== RESPONSIVENESS ===-- --- */
+@media (max-width: 1280px) {
+  .container {
+    min-width: 1280px;
+
+    /* border: 2px solid purple; */
+  }
+}
+
+
+@media (max-width: 1024px) {
+  .container {
+    min-width: 1024;
+
+    /* border: 2px solid orange; */
+  }
+
+  .nav-links {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    min-width: 768px;
+
+    /* border: 2px solid orangered; */
+  }
+
+  .user-auth a {
+    font-size: 20px;
+  }
+
+  /* == Index page styling == */
+  .intro-section {
+    gap: 40px;
+
+    padding-top: 120px;
+  }
+
+  .intro-text h1 {
+    font-size: 40px;
+  }
+
+  .intro-text h2 {
+    font-size: 20px;
+  }
+
+  .nav-links {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 640px) {
+  .container {
+    min-width: 640px;
+
+    /* border: 2px solid red; */
+  }
+
+  /* === HEADER STYLING === */
+  .header {
+    /* min-height: 10vh; */
+    /* padding: 25px; */
+    justify-content: space-between;
+  }
+
+  .menu-bar {
+    display: block;
+  }
+
+  .menu-bar {
+    font-size: 24px;
+  }
+
+  .user-auth a {
+    font-size: 18px;
+  }
+
+  /* == Index page styling == */
+  .intro-section {
+    min-height: 90vh;
+    gap: 60px;
+
+    padding-top: 150px;
+  }
+
+  .profile-img {
+    width: 240px;
+  }
+
+  .intro-text h1 {
+    font-size: 32px;
+  }
+
+  .intro-text h2 {
+    font-size: 18px;
+  }
+
+  .intro-text h1,
+  .intro-text h2 {
+    margin-bottom: 10px;
+  }
+
+  /* === NAVIGATION BAR STYLING === */
+  .nav-bar {
+    display: none;
+  }
+}
+
+@media (max-width: 475px) {
+  .container {
+    min-width: 475px;
+
+    /* border: 2px solid teal; */
+  }
+
+  .user-auth a {
+    font-size: 16px;
+  }
+
+  /* == Index page styling == */
+  .intro-section {
+    margin-top: 40px;
+    min-height: 100vh;
+    gap: 50px;
+
+    padding-top: 150px;
+  }
+
+  .profile-img {
+    width: 200px;
+  }
+
+  .intro-text h2 {
+    font-size: 16px;
+  }
+
+  .intro-text h1,
+  .intro-text h2 {
+    margin-bottom: 8px;
+  }
+}
+
+/* @media (min-width: 1280px) {} */
+
+/* @media (min-width: 1536px) {} */

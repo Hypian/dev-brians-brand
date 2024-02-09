@@ -6,29 +6,47 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>My Web Portfolio</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@500;800&display=swap" />
-  <link rel="stylesheet" href="index.css" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="./styles.css" />
 </head>
 
 <body>
-  <div class="main-container">
-    <div class="flex-row-cac">
-      <a href="signup.html" class="sign-up">SignUp</a><a href="login page.html" class="login">Login</a>
-    </div>
-    <div class="ellipse"></div>
-    <h1>
-      <span class="my-name-is">MY NAME IS </span>
-      <span class="kagingo-brian">KAGINGO BRIAN</span>
+  <div class="container">
+    <header class="header">
+      <div class="menu-bar">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+      <div class="user-auth">
+        <a href="./login page.html">Login</a>
+        <div class="separator-line"></div>
+        <a href="./signup.html">SignUp</a>
+      </div>
+    </header>
 
-    <div class="line-1"></div>
-    <span class="programmer-web-designer">PROGRAMMER,WEB DESIGNER</span>
-    <div class="rectangle">
-      <a href="contact.html" class="contact">CONTACT</a>
-      <a href="services.html" class="service">SERVICES</a>
-      <a href="about me.html" class="about">ABOUT</span>
-      <a href="skills.html" class="skills">SKILLS</a>
-      <a class="home">HOME</span>
-      <a href="blog page.html" class="blog">BLOG</a></span>
-    </div>
+    <section class="intro-section">
+      <img
+        src="./skins/nigger.2.png"
+        alt="profile image"
+        class="profile-img"
+      />
+      <div class="intro-text">
+        <h2 class="subtitle">MY NAME IS</h2>
+        <h1 class="title">KAGINGO BRIAN</h1>
+        <hr />
+        <h2 class="subtitle">Programmer, Web Designer</h2>
+      </div>
+    </section>
+
+
+   <section class="nav-bar">
+        <a href="./index.html" class="nav-links nav-links-active">HOME</a>
+        <a href="./about me.html" class="nav-links">ABOUT</a>
+        <a href="./skills.html" class="nav-links">SKILLS</a>
+        <a href="./services.html" class="nav-links">SERVICES</a>
+        <a href="./blog page.html" class="nav-links">BLOG</a>
+        <a href="./contact.html" class="nav-links">CONTACT</a>
+      </section>
   </div>
 
   <script src="https://kit.fontawesome.com/cca27188b7.js" crossorigin="anonymous"></script>
