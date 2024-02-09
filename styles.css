@@ -34,6 +34,12 @@ a {
   font-weight: 400;
 }
 
+img {
+  width: 15rem; 
+  display: block;
+  object-fit: cover;
+}
+
 .container {
   width: 100%;
   margin: 0 auto;
