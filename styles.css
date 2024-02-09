@@ -1,3 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap");
+
+:root {
+  --bg-color: #f1f5f9;
+
+  --slate-500: #64748b;
+  --slate-700: #334155;
+  --slate-900: #0f172a;
+
+  --primary-color: #fb7185;
+  --secondary-color: #4f46e5;
+
+  --font-family: "Quicksand", sans-serif;
+  --alt-font-family: "Protest Revolution", sans-serif;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -5,22 +21,22 @@
 }
 
 body {
-  background-color: #cad2c5;
-  font-family: sans-serif;
-  height: 100vh;
+  background-color: var(--bg-color);
+  font-family: var(--font-family);
+  color: var(--slate-700);
 
-  color: #84a98c;
+  height: 100vh;
 }
 
 a {
   text-decoration: none;
-  color: #84a98c;
+  color: var(--slate-700);
+  font-weight: 400;
 }
 
 .container {
   width: 100%;
-  min-width: 1536px;
-  margin: auto 0;
+  margin: 0 auto;
   position: relative;
 
   display: flex;
@@ -29,14 +45,15 @@ a {
   /* border: 2px solid blue; */
 }
 
-.title {
-  font-size: 32px;
-  font-weight: bold;
+.title-rem {
+  font-size: 2rem;
+  /* font-weight: 700; */
+  /* font-family: var(--alt-font-family); */
 }
 
-.subtitle {
-  font-size: 24px;
-  font-weight: 500;
+.subtitle-rem {
+  font-size: 32px;
+  /* font-weight: 500; */
   text-transform: uppercase;
 }
 
@@ -144,7 +161,6 @@ a {
     /* border: 2px solid purple; */
   }
 }
-
 
 @media (max-width: 1024px) {
   .container {

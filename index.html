@@ -1,18 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Web Portfolio</title>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Web Portfolio</title>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@500;800&display=swap" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;500;700;900&family=Protest+Revolution&display=swap"
+      rel="stylesheet"
+    />
 
-  <!-- CSS -->
-  <link rel="stylesheet" href="./styles.css" />
-</head>
+    <!-- CSS -->
+    <link rel="stylesheet" href="./styles.css" />
 
-<body>
-  <div class="container">
+    <!-- fontawesome CDN -->
+    <script defer
+      src="https://kit.fontawesome.com/cca27188b7.js"
+      crossorigin="anonymous"
+    ></script>
+
+  
+  </head>
+
+  <body>
     <header class="header">
       <div class="menu-bar">
         <i class="fa-solid fa-bars"></i>
@@ -25,31 +38,24 @@
     </header>
 
     <section class="intro-section">
-      <img
-        src="./skins/nigger.2.png"
-        alt="profile image"
-        class="profile-img"
-      />
+      <img src="./skins/nigger.2.png" alt="profile image" class="profile-img" />
       <div class="intro-text">
         <h2 class="subtitle">MY NAME IS</h2>
-        <h1 class="title">KAGINGO BRIAN</h1>
+        <h3 class="title-rem">KAGINGO BRIAN</h3>
         <hr />
-        <h2 class="subtitle">Programmer, Web Designer</h2>
+        <h3 class="subtitle-rem">Programmer, Web Designer</h3>
       </div>
     </section>
 
+    <section class="nav-bar">
+      <a href="./index.html" class="nav-links nav-links-active">HOME</a>
+      <a href="./about me.html" class="nav-links">ABOUT</a>
+      <a href="./skills.html" class="nav-links">SKILLS</a>
+      <a href="./services.html" class="nav-links">SERVICES</a>
+      <a href="./blog page.html" class="nav-links">BLOG</a>
+      <a href="./contact.html" class="nav-links">CONTACT</a>
+    </section>
 
-   <section class="nav-bar">
-        <a href="./index.html" class="nav-links nav-links-active">HOME</a>
-        <a href="./about me.html" class="nav-links">ABOUT</a>
-        <a href="./skills.html" class="nav-links">SKILLS</a>
-        <a href="./services.html" class="nav-links">SERVICES</a>
-        <a href="./blog page.html" class="nav-links">BLOG</a>
-        <a href="./contact.html" class="nav-links">CONTACT</a>
-      </section>
-  </div>
-
-  <script src="https://kit.fontawesome.com/cca27188b7.js" crossorigin="anonymous"></script>
-</body>
-
+    
+  </body>
 </html>
