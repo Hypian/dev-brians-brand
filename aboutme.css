@@ -63,7 +63,6 @@
   .container {
     min-width: 1280px;
   }
-  
 }
 
 @media (max-width: 1024px) {
@@ -80,14 +79,23 @@
   .descr-details span {
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
+    display: left;
   }
+ 
 }
 
 @media (max-width: 640px) {
   .container {
     min-width: 640px;
   }
+  .menu-bar{
+    font-size: 1rem;
+  }
+  .descr-details{
+    flex-direction: column;
+  }
 }
+
 
 @media (max-width: 475px) {
   .container {
@@ -96,5 +104,7 @@
   .nav-bar {
     display: none;
   }
+  .menu-bar{
 
+  }
 }

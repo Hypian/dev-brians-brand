@@ -98,7 +98,7 @@ img {
 
 .separator-line {
   padding-top: 1.5rem;
-  border: 2px solid var(--secondary-color);
+  border: 1.2px solid var(--slate-900);
 }
 
 /* ==section intro  == */
@@ -236,7 +236,6 @@ img {
   .menu-bar {
     font-size: 1.5rem;
     padding: 1rem;
-
   }
 
   .user-auth {
