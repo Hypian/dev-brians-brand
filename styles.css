@@ -161,30 +161,20 @@ img {
 }
 /* -- --=== RESPONSIVENESS ===-- --- */
 @media (max-width: 1280px) {
-  .container {
-    min-width: 1280px;
-
-    /* border: 2px solid purple; */
+  .title {
+    font-size: 4rem;
   }
 }
 
 @media (max-width: 1024px) {
-  .container {
-    min-width: 1024;
-
-    /* border: 2px solid orange; */
-  }
-
   .nav-links {
     font-size: 20px;
   }
 }
 
 @media (max-width: 768px) {
-  .container {
-    min-width: 768px;
-
-    /* border: 2px solid orangered; */
+  .title {
+    font-size: 3rem;
   }
 
   .user-auth {
@@ -216,10 +206,8 @@ img {
 }
 
 @media (max-width: 640px) {
-  .container {
-    min-width: 640px;
-
-    /* border: 2px solid red; */
+  .title {
+    font-size: 2rem;
   }
 
   /* === HEADER STYLING === */
@@ -278,11 +266,7 @@ img {
 }
 
 @media (max-width: 475px) {
-  .container {
-    min-width: 475px;
 
-    /* border: 2px solid teal; */
-  }
 
   .user-auth a {
     font-size: 16px;
