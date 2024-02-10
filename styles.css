@@ -35,7 +35,7 @@ a {
 }
 
 img {
-  width: 15rem; 
+  width: 15rem;
   display: block;
   object-fit: cover;
 }
@@ -81,7 +81,7 @@ img {
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 2rem;
+  gap: 1.5rem;
   padding: 1.2rem;
 }
 
@@ -97,7 +97,7 @@ img {
 }
 
 .separator-line {
-  padding-top: 2.4rem;
+  padding-top: 1.5rem;
   border: 2px solid var(--secondary-color);
 }
 
@@ -142,7 +142,7 @@ img {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  padding: 30px;
+  padding: 20px;
 }
 
 .nav-links {
@@ -151,12 +151,12 @@ img {
 }
 
 .nav-links:hover {
-   border-bottom: 3px solid var(--secondary-color);
+  border-bottom: 3px solid var(--secondary-color);
   color: var(--secondary-color);
 }
 
 .nav-links-active {
-   border-bottom: 3px solid var(--secondary-color);
+  border-bottom: 3px solid var(--secondary-color);
   color: var(--secondary-color);
 }
 /* -- --=== RESPONSIVENESS ===-- --- */
@@ -187,8 +187,12 @@ img {
     /* border: 2px solid orangered; */
   }
 
+  .user-auth {
+    gap: 1rem;
+  }
+
   .user-auth a {
-    font-size: 20px;
+    font-size: 1rem;
   }
 
   /* == Index page styling == */
@@ -230,7 +234,13 @@ img {
   }
 
   .menu-bar {
-    font-size: 2rem;
+    font-size: 1.5rem;
+    padding: 1rem;
+
+  }
+
+  .user-auth {
+    gap: 0.4rem;
   }
 
   .user-auth a {

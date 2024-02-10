@@ -43,18 +43,18 @@
   flex-direction: column;
 }
 
-.cvbutton{
+.cvbutton {
   height: 2rem;
   display: inline-block;
   border-radius: 0.5rem;
-  padding:1rem,;
-  background-color:#64748b;
+  padding: 1rem;
+  background-color: #64748b;
   transform: translateY(4rem);
   justify-content: center;
   align-items: center;
   display: flex;
 }
-.cvbutton:hover{
+.cvbutton:hover {
   background-color: #4f46e5;
   color: white;
 }
@@ -63,6 +63,7 @@
   .container {
     min-width: 1280px;
   }
+  
 }
 
 @media (max-width: 1024px) {
@@ -92,7 +93,8 @@
   .container {
     min-width: 475px;
   }
-}
-.nav-bar {
+  .nav-bar {
     display: none;
   }
+
+}
