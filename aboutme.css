@@ -91,5 +91,8 @@
 @media (max-width: 475px) {
   .container {
     min-width: 475px;
-
+  }
+}
+.nav-bar {
+    display: none;
   }
