@@ -3,36 +3,71 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>sign up page</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;800;900&display=swap" />
-    <link rel="stylesheet" href="signup.css" />
+    <title>My Web Portfolio</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;500;700;900&family=Protest+Revolution&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./signup.css" />
+
+    <!-- fontawesome CDN -->
+    <script
+      defer
+      src="https://kit.fontawesome.com/cca27188b7.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
+
   <body>
+    <header class="header">
+      <div class="menu-bar">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+    </header>
     <div class="main-container">
-      <span class="text">Not A Member?</span
-      ><span class="text-2">Sign Up !</span>
-      <div class="group">
-          <input type="text" id="name" name="name" placeholder="Full Name"><br><br>
-        <div class="pic"></div>
-      </div>
-      <div class="wrapper">
-            <input type="email" id="email" name="email" required placeholder="Email"><br><br>
-        <div class="img"></div>
-      </div>
-      <div class="wrapper-2">
-            <input type="password" id="password" name="password" required placeholder="Password"><br><br>
-        <div class="pic-2"></div>
-      </div>
-      <div class="box"><<form action="/submit_form" method="post"><input type="submit"></div>
-      <div class="wrapper-3">
-        <a href="contact.html" class="text-7">CONTACT </a>
-        <a href="services.html" class="text-8">SERVICES </a>
-        <a href="about me.html" class="text-9">ABOUT </a>
-        <a href="skills.html"class="text-a">SKILLS </a>
-        <a href="index.html" class="text-b">HOME </a>
-        <a href="blog page.html" class="text-c">BLOG </a>
+      <h1 class="text">Not A Member?</h1>
+      <h2 class="text-2">Sign Up !</h2>
+      <div class="box">
+        <form action="/submit_form" method="post">
+          <input
+            type="text"
+            id="texto"
+            name="texto"
+            required
+            placeholder="Full Name"
+          />
+          <input
+            type="email"
+            id="email"
+            name="email"
+            required
+            placeholder="Email"
+          /><br /><br />
+          <input
+            type="password"
+            id="password"
+            name="password"
+            required
+            placeholder="Password"
+          /><br /><br />
+          <input type="submit" />
+        </form>
       </div>
     </div>
 
+    <section class="nav-bar">
+      <a href="./index.html" class="nav-links nav-links-active">HOME</a>
+      <a href="./about me.html" class="nav-links">ABOUT</a>
+      <a href="./skills.html" class="nav-links">SKILLS</a>
+      <a href="./services.html" class="nav-links">SERVICES</a>
+      <a href="./blog page.html" class="nav-links">BLOG</a>
+      <a href="./contact.html" class="nav-links">CONTACT</a>
+    </section>
   </body>
 </html>

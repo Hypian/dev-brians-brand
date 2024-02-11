@@ -3,39 +3,53 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>login page</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;800;900&display=swap" />
-    <link rel="stylesheet" href="login.css" />
+    <title>My Web Portfolio</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;500;700;900&family=Protest+Revolution&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./login.css" />
+
+    <!-- fontawesome CDN -->
+    <script
+      defer
+      src="https://kit.fontawesome.com/cca27188b7.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
+
   <body>
-    <div class="main-container">
-      <span class="text">I have an account</span
-      ><span class="text-2">Log In !</span>
-      <div class="section">
-        <input type="email" id="email" name="email" placeholder="Email">
-        <div class="pic"></div>
+    <header class="header">
+      <div class="menu-bar">
+        <i class="fa-solid fa-bars"></i>
       </div>
-      <div class="group">
-        <input type="password" id="password" name="password" placeholder="Password">
-        <div class="img"></div>
+    </header>
+<div class="main-container">
+      <h1 class="text">Already Have An Acount</h1>
+      <br>
+      <h2 class="text-2">Login!</h2>
+    <div class="wrapper">
+
+            <input type="email" id="email" name="email" required placeholder="Email"><br><br>
+            <input type="password" id="password" name="password" required placeholder="Password"><br><br>
+        <div class="pic-2"></div>
       </div>
       <div class="box"><form action="/submit_form" method="post"><input type="submit"></div>
-      <div class="group-2">
-        <a href="effefeff" class="text-6">Forgot Password?</a>
-        
-        <label for="remember_me"> <input type="checkbox" name="remember_me" id="Remember">Remember Me</label>
-        
-        <div class="img-2"></div>
-      </div>
-      <div class="group-3">
-        <a href="contact.html" class="text-8">CONTACT </a>
-        <a href="services.html" class="text-9">SERVICES </a>
-        <a href="about me.html" class="text-a">ABOUT </a>
-        <a href="skills.html" class="text-b">SKILLS </a>
-        <a href="index.html" class="text-c">HOME </a>
-        <a href="blog page.html" class="text-d">BLOG </a>
-      </div>
-    </div>
+ 
 
+    <section class="nav-bar">
+      <a href="./index.html" class="nav-links nav-links-active">HOME</a>
+      <a href="./about me.html" class="nav-links">ABOUT</a>
+      <a href="./skills.html" class="nav-links">SKILLS</a>
+      <a href="./services.html" class="nav-links">SERVICES</a>
+      <a href="./blog page.html" class="nav-links">BLOG</a>
+      <a href="./contact.html" class="nav-links">CONTACT</a>
+    </section>
   </body>
 </html>
