@@ -29,89 +29,92 @@
   justify-content: center;
 }
 .form {
-  background:var(--bg-color);
-  border-radius:6px ;
+  background: var(--bg-color);
+  border-radius: 6px;
   max-width: 430px;
   width: 100%;
   padding: 30px;
 }
-header{
+header {
   font-size: 28px;
   font-weight: 600;
   color: var(--slate-900);
   text-align: center;
 }
-form{
+form {
   margin-top: 30px;
 }
-form .field{
+.form .field {
   position: relative;
   height: 50px;
   width: 100%;
   margin-top: 20px;
+  border-radius: 6px;
 }
-.field input, .field button{
+.field input,
+.field button {
   height: 100%;
   width: 100%;
   border: none;
-  font-size:16px;
+  font-size: 16px;
   font-weight: 400;
   border-radius: 6px;
-
 }
-.field input{
+.field input {
   outline: none;
   padding: 0 15px;
   border: 1px solid white;
 }
-.eye-icon{
+.field input:focus {
+  border-bottom-width: 3px;
+}
+.eye-icon {
   position: absolute;
   top: 50%;
   right: 10px;
   transform: translateY(-50%);
   position: absolute;
-font-size: 18px;
-color: var(--slate-900);
-cursor: pointer;
-padding: 5px;
+  font-size: 18px;
+  color: var(--slate-900);
+  cursor: pointer;
+  padding: 5px;
 }
 
-
-.form-link{
+.form-link {
   text-align: center;
   margin-top: 10px;
 }
-.form button{
+.form button {
   color: var(--slate-900);
   background-color: var(--slate-700);
   transition: all 0.3 ease;
   cursor: pointer;
 }
-.field button:hover{
+.field button:hover {
   color: white;
   background-color: var(--secondary-color);
 }
-.form-link span,.form-link span a{
+.form-link span,
+.form-link span a {
   font-size: 14px;
   font-weight: 400;
 }
-.form a{
+.form a {
   text-decoration: none;
   color: var(--secondary-color);
-
 }
-.form a:hover{
-color: var(--secondary-color);
-text-decoration: underline;
+.form a:hover {
+  color: var(--secondary-color);
+  text-decoration: underline;
 }
-.line{
+.line {
   position: relative;
   height: 1px;
   width: 100%;
   margin: 36px 0;
-  background-color:var(--slate-900);
+  background-color: var(--slate-900);
 }
-.line::before{
+.line::before {
   content: "Or";
   position: absolute;
   top: 50%;
@@ -119,5 +122,20 @@ text-decoration: underline;
   transform: translate(-50%, -50%);
   background-color: var(--bg-color);
   padding: 0 15px;
-   color: var(--slate-900);
+  color: var(--slate-900);
+}
+.media-options a {
+  display: flex;
+  background-color: #1152a2;
+  align-items: center;
+  justify-content: center;
+}
+a.facebook {
+  color: var(--slate-900);
+  background-color: #1152a2;
+}
+a.facebook:hover {
+  text-decoration: none;
+  color: white;
+  background-color: #1152a2;
 }
