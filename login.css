@@ -21,179 +21,178 @@
   box-sizing: border-box;
 }
 
-.container{
-    height: 100vh;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: white;
-    column-gap: 30px;
+.container {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--bg-color);
+  column-gap: 30px;
 }
-.form{
-    position: absolute;
-    max-width: 430px;
-    width: 100%;
-    padding: 30px;
-    border-radius: 6px;
-    background:var(--bg-color);
+.form {
+  position: absolute;
+  max-width: 430px;
+  width: 100%;
+  padding: 30px;
+  border-radius: 6px;
+  background: rgb(255, 255, 255);
 }
-.form.signup{
-    opacity: 0;
-    pointer-events: none;
+.form.signup {
+  opacity: 0;
+  pointer-events: none;
 }
-.forms.show-signup .form.signup{
-    opacity: 1;
-    pointer-events: auto;
+.forms.show-signup .form.signup {
+  opacity: 1;
+  pointer-events: auto;
 }
-.forms.show-signup .form.login{
-    opacity: 0;
-    pointer-events: none;
+.forms.show-signup .form.login {
+  opacity: 0;
+  pointer-events: none;
 }
-header{
-    font-size: 28px;
-    font-weight: 600;
-    color:var(--slate-900);
-    text-align: center;
+header {
+  font-size: 28px;
+  font-weight: 600;
+  color: var(--slate-900);
+  text-align: center;
 }
-form{
-    margin-top: 30px;
+form {
+  margin-top: 30px;
 }
-.form .field{
-    position: relative;
-    height: 50px;
-    width: 100%;
-    margin-top: 20px;
-    border-radius: 6px;
+.form .field {
+  position: relative;
+  height: 50px;
+  width: 100%;
+  margin-top: 20px;
+  border-radius: 6px;
 }
 .field input,
-.field button{
-    height: 100%;
-    width: 100%;
-    border: none;
-    font-size: 16px;
-    font-weight: 400;
-    border-radius: 6px;
+.field button {
+  height: 100%;
+  width: 100%;
+  border: none;
+  font-size: 16px;
+  font-weight: 400;
+  border-radius: 6px;
 }
-.field input{
-    outline: none;
-    padding: 0 15px;
-    border: 1px solid#CACACA;
+.field input {
+  outline: none;
+  padding: 0 15px;
+  border: 1px solid#CACACA;
 }
-.field input:focus{
-    border-bottom-width: 2px;
+.field input:focus {
+  border-bottom-width: 2px;
 }
-.eye-icon{
-    position: absolute;
-    top: 50%;
-    right: 10px;
-    transform: translateY(-50%);
-    font-size: 18px;
-    color: var(--slate-900);
-    cursor: pointer;
-    padding: 5px;
+.eye-icon {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  font-size: 18px;
+  color: var(--slate-900);
+  cursor: pointer;
+  padding: 5px;
 }
-.field button{
-    color:var(--slate-900);
-    background-color: var(--secondary-color);
-    transition: all 0.3s ease;
-    cursor: pointer;
+.field button {
+  color: var(--slate-900);
+  background-color: var(--secondary-color);
+  transition: all 0.3s ease;
+  cursor: pointer;
 }
-.field button:hover{
-   color: var(--bg-color);
-   font-weight: 600;
+.field button:hover {
+  color: var(--bg-color);
+  font-weight: 600;
 }
-.form-link{
-    text-align: center;
-    margin-top: 10px;
+.form-link {
+  text-align: center;
+  margin-top: 10px;
 }
 .form-link span,
-.form-link a{
-    font-size: 14px;
-    font-weight: 400;
-    color:var(--slate-900);
+.form-link a {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--slate-900);
 }
-.form a{
-    color: var(--secondary-color);
-    text-decoration: none;
+.form a {
+  color: var(--secondary-color);
+  text-decoration: none;
 }
-.form-content a:hover{
-    text-decoration: underline;
+.form-content a:hover {
+  text-decoration: underline;
 }
-.line{
-    position: relative;
-    height: 1px;
-    width: 100%;
-    margin: 36px 0;
-    background-color: #d4d4d4;
+.line {
+  position: relative;
+  height: 1px;
+  width: 100%;
+  margin: 36px 0;
+  background-color: var(--slate-900);
 }
-.line::before{
-    content: 'Or';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color:var(--bg-color);
-    color: slate;
-    padding: 0 15px;
+.line::before {
+  content: "Or";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  color: slate;
+  padding: 0 15px;
 }
-.media-options a{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.media-options a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-a.facebook{
-    color: var(--slate-900);
-    background-color: #4267b2;
-    transition: all 0.3s ease
+a.facebook {
+  color: var(--slate-900);
+  background-color: #4267b2;
+  transition: all 0.3s ease;
 }
-a.facebook:hover{
-    color: var(--bg-color);
-    background-color: #4267b2;
-    font-weight: 600;
+a.facebook:hover {
+  color: var(--bg-color);
+  background-color: #4267b2;
+  font-weight: 600;
 }
 
-a.facebook .facebook-icon{
-    height: 28px;
-    width: 28px;
-    color: var(--slate-900);
-    font-size: 20px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color:#4061a4;
+a.facebook .facebook-icon {
+  height: 28px;
+  width: 28px;
+  color: var(--slate-900);
+  font-size: 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #4061a4;
 }
 
 .facebook-icon,
-img.google-img{
-    position: absolute;
-    top: 50%;
-    left: 15px;
-    transform: translateY(-50%);
+img.google-img {
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  transform: translateY(-50%);
 }
-img.google-img{
-    height: 20px;
-    width: 20px;
-    object-fit: cover;
+img.google-img {
+  height: 20px;
+  width: 20px;
+  object-fit: cover;
 }
-a.google{
-    border: 1px solid var(--slate-900);
+a.google {
+  border: 1px solid var(--slate-900);
 }
-a.google span{
-    font-weight: 500;
-    opacity: 0.6;
-    color: var(--slate-900);
+a.google span {
+  font-weight: 500;
+  opacity: 0.6;
+  color: var(--slate-900);
 }
-a.google span:hover{
-    font-weight: 600;
-    opacity: 0.6;
-    color:black;
+a.google span:hover {
+  font-weight: 600;
+  opacity: 0.6;
+  color: black;
 }
 
 @media screen and (max-width: 400px) {
-    .form{
-        padding: 20px 10px;
-    }
-    
+  .form {
+    padding: 20px 10px;
+  }
 }
