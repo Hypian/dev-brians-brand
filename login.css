@@ -162,7 +162,7 @@ a.facebook .facebook-icon{
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color:var(--slate-700);
+    background-color:#4061a4;
 }
 
 .facebook-icon,
