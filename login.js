@@ -25,3 +25,19 @@ links.forEach((link) => {
     forms.classList.toggle("show-signup");
   });
 });
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+  apiKey: "AIzaSyCOhMH5BVYH_LFG9qsnZ6Zv147-oOs21X8",
+  authDomain: "brians-web-portfolio.firebaseapp.com",
+  projectId: "brians-web-portfolio",
+  storageBucket: "brians-web-portfolio.appspot.com",
+  messagingSenderId: "206537371859",
+  appId: "1:206537371859:web:cb1379e306bfc6f3a82426",
+  measurementId: "G-HN2BD43WYH",
+};
+//initialize
+firebaseConfig.initializeApp(firebaseConfig);
+//Initialize variables
+const auth = firebase.auth();
+const database = firebase.auth();
