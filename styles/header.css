@@ -1,0 +1,136 @@
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: .5rem 1rem;
+  min-height: 8vh;
+}
+
+.menu-bar {
+  border: 1px solid var(--slate-800);
+  border-radius: 4px;
+  padding: .2rem .4rem;
+}
+
+.menu-bar i {
+  color: var(--slate-800);
+  font-size: .85rem;
+  font-weight: bold;
+}
+
+.logo {
+  display: none;
+}
+
+.nav-bar {
+  display: none;
+}
+
+.user-auth {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.user-auth a {
+  padding: 1rem 0;
+  margin: .5em 1em;
+  font-size: .75rem;
+  font-weight: 700;
+  color: var(--slate-800);
+  transition: all .3s ease;
+}
+
+.user-auth a:hover {
+  /* border-bottom: 3px solid var(--secondary-color); */
+  color: var(--secondary-color);
+}
+
+.separator-line {
+  padding-top: 1rem;
+  border: 1px solid var(--slate-800);
+}
+
+/* --- Media Queries --- */
+/* Extra Small Screen */
+/* @media (min-width: 475px) {} */
+
+/* Small Screens */
+@media (min-width: 640px) {
+  .menu-bar i {
+    font-size: 1rem;
+  }
+
+  .user-auth a {
+    font-size: .85rem;
+  }
+}
+
+/* Medium Screens */
+@media (min-width: 768px) {
+  .menu-bar i {
+    font-size: 1.25rem;
+  }
+
+  .user-auth a {
+    font-size: 1rem;
+  }
+}
+
+/* Large Screens */
+@media (min-width: 1024px) {
+
+  .menu-bar {
+    display: none;
+  }
+
+  .logo {
+    display: block;
+  }
+
+  .logo h1 {
+    font-family: var(--alt-font-family);
+    font-size: 1.5rem;
+    color: var(--secondary-color);
+  }
+
+  .nav-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    gap: 1rem;
+  }
+
+  .nav-bar a {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--slate-800);
+    text-transform: capitalize;
+    padding: 1rem 0;
+    margin: .5em 1em;
+    transition: all .3s ease;
+  }
+
+  .nav-bar a:hover {
+    color: var(--secondary-color);
+  }
+
+  #nav-links-active {
+    color: var(--primary-color);
+  }
+}
+
+/* X Large Screens */
+/* @media (min-width: 1280px) {} */
+
+/* 2x Large Screens */
+@media (min-width: 1536px) {
+
+  .nav-bar a,
+  .user-auth a {
+    font-size: 1.125rem;
+  }
+}

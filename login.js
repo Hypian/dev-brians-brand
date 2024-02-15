@@ -41,3 +41,10 @@ firebaseConfig.initializeApp(firebaseConfig);
 //Initialize variables
 const auth = firebase.auth();
 const database = firebase.auth();
+// imma setup a function to handle the register
+function register() {
+  // get all register input fields
+  email = document.getElementById("email").value;
+  password = document.getElementById("password").value;
+}
+function

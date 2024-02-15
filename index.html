@@ -5,52 +5,239 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My Web Portfolio</title>
 
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;500;700;900&family=Protest+Revolution&display=swap"
-      rel="stylesheet"
-    />
-
     <!-- CSS -->
-    <link rel="stylesheet" href="./styles.css" />
-
-    <!-- fontawesome CDN -->
-    <script
-      defer
-      src="https://kit.fontawesome.com/cca27188b7.js"
-      crossorigin="anonymous"
-    ></script>
+    <link rel="stylesheet" href="./main.css" />
   </head>
-
   <body>
-    <header class="header">
+    <header class="header container">
       <div class="menu-bar">
         <i class="fa-solid fa-bars"></i>
       </div>
+      <div class="logo">
+        <h1>&lt;Brian /&gt;</h1>
+      </div>
+      <nav class="nav-bar">
+        <a href="#intro" id="nav-links-active">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#blog">Blog</a>
+        <a href="#contact">Contact</a>
+      </nav>
       <div class="user-auth">
-        <a href="./login page.html">Login</a>
+        <a href="./pages/login.html">Login</a>
+        <div class="separator-line"></div>
+        <a href="./pages/signup.html">SignUp</a>
       </div>
     </header>
 
-    <section class="intro-section">
-      <img src="./skins/nigger.2.png" alt="profile image" class="profile-img" />
+    <section id="intro" class="intro-section container section">
+      <img
+        src="./images/nigger.2.png"
+        alt="profile image"
+        class="profile-img"
+      />
       <div class="intro-text">
-        <h2 class="subtitle">MY NAME IS</h2>
-        <h1 class="title">KAGINGO BRIAN</h1>
+        <h2>Hello 👋, I'm</h2>
+        <h1>KAGINGO BRIAN</h1>
         <hr />
         <h2 class="subtitle">Programmer, Web Designer</h2>
+        <div class="social-links">
+          <a href="">
+            <i class="fa-brands fa-github"></i>
+          </a>
+          <a href="">
+            <i class="fa-brands fa-twitter"></i>
+          </a>
+          <a href="">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+        </div>
       </div>
     </section>
 
-    <section class="nav-bar">
-      <a href="./index.html" class="nav-links nav-links-active">HOME</a>
-      <a href="./about me.html" class="nav-links">ABOUT</a>
-      <a href="./skills.html" class="nav-links">SKILLS</a>
-      <a href="./services.html" class="nav-links">SERVICES</a>
-      <a href="./blog page.html" class="nav-links">BLOG</a>
-      <a href="./contact.html" class="nav-links">CONTACT</a>
+    <section id="about" class="about container section">
+      <h1 class="title">About Me</h1>
+      <p class="description">
+        Passionate and creative, I bring experience and innovation to every
+        project. A detail-oriented team player, I thrive on achieving results.
+        With strong communication skills and a goal-oriented mindset, I'm ready
+        to contribute to impactful projects.
+      </p>
+
+      <div class="about-content">
+        <img src="../images/nigger.2.png" alt="about-img" class="about-img" />
+        <div class="about-details">
+          <div class="bio">
+            <div>
+              <h3>BIRTHPLACE</h3>
+              <p>Kampala, Uganda 🇺🇬</p>
+            </div>
+            <div>
+              <h3>RESIDENCE</h3>
+              <p>Kigali, Rwanda 🇷🇼</p>
+            </div>
+            <div>
+              <h3>HOBBIES</h3>
+              <p>Coding, Reading, PC Building</p>
+            </div>
+            <div>
+              <h3>BORN</h3>
+              <p>01/10/2002</p>
+            </div>
+            <div>
+              <h3>EDUCATION</h3>
+              <p>BIT, BCS</p>
+            </div>
+            <div>
+              <h3>EMAIL</h3>
+              <p>kagingobrian2002@gmail.com</p>
+            </div>
+          </div>
+          <hr />
+          <div class="skills">
+            <h2>My Technical skills</h2>
+            <div class="skill-icons">
+              <div class="skill-icon">
+                <i class="fa-brands fa-html5"></i>
+                <p>HTML</p>
+              </div>
+              <div class="skill-icon">
+                <i class="fa-brands fa-css3"></i>
+                <p>CSS</p>
+              </div>
+              <div class="skill-icon">
+                <i class="fa-brands fa-js"></i>
+                <p>JavaScript</p>
+              </div>
+              <div class="skill-icon">
+                <i class="fa-brands fa-node"></i>
+                <p>NodeJs</p>
+              </div>
+              <div class="skill-icon">
+                <i class="fa-brands fa-unity"></i>
+                <p>Unity</p>
+              </div>
+              <div class="skill-icon">
+                <i class="fa-brands fa-figma"></i>
+                <p>Figma</p>
+              </div>
+            </div>
+          </div>
+          <a href="" class="btn about-btn">Download CV</a>
+        </div>
+      </div>
     </section>
+
+    <section id="services" class="services container section">
+      <h1 class="title">My Services</h1>
+
+      <div class="services-content">
+        <div class="service-card">
+          <h2>Web Development</h2>
+          <p>
+            I specialize in efficient web solutions with a focus on user
+            experience. Clean code ensures seamless functionality, and my
+            proficiency in responsive design, along with collaboration in teams,
+            results in standout websites
+          </p>
+        </div>
+
+        <div class="service-card">
+          <h2>Web Design</h2>
+          <p>
+            In web design, I bring creativity and a focus on user experience to
+            every project. Proficient in translating ideas into engaging visual
+            concepts, I collaborate closely with teams to deliver visually
+            stunning and user-friendly designs
+          </p>
+        </div>
+
+        <div class="service-card">
+          <h2>Creative Design</h2>
+          <p>
+            In creative design, I blend imagination with practicality, crafting
+            visual compelling solutions. My approach combines artistic flair
+            with a strategic mindset, ensuring designs captivate and serve their
+            purpose effectively
+          </p>
+        </div>
+
+        <div class="service-card">
+          <h2>Branding</h2>
+          <p>
+            In branding, I specialize in creating distinctive and memorable
+            identities. My approach combines strategic thinking with creative
+            flair, ensuring that each brand reflects a unique story and
+            resonates with its target audience
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact container section">
+      <h1 class="title">
+        Get In Touch <br />
+        <span>I'd Love to Help</span>
+      </h1>
+      <div class="contact-content">
+        <form action="" class="form-content">
+          <input
+            type="text"
+            name="fullname"
+            id="fullname"
+            placeholder="Full Name"
+            required
+          />
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Email"
+            required
+          />
+          <textarea
+            name="message"
+            id="message"
+            cols="30"
+            rows="5"
+            placeholder="Message"
+            required
+          ></textarea>
+          <button type="submit" class="btn form-btn">Submit</button>
+        </form>
+        <div class="contact-details">
+          <p>🌍 Kigali, Rwanda</p>
+          <p>🧭 KK 487 ST</p>
+          <p>📱 +250790894729</p>
+          <p>📧 kagingobrian2002@gmail.com</p>
+        </div>
+      </div>
+    </section>
+
+    <footer class="section">
+      <div class="container">
+        <div class="social-links">
+          <a href="">
+            <i class="fa-brands fa-github"></i>
+          </a>
+          <a href="">
+            <i class="fa-brands fa-twitter"></i>
+          </a>
+          <a href="">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+        </div>
+        <p>
+          Designed and Developed by
+          <a href="#" class="footer-link">Kagingo Brian</a>
+        </p>
+      </div>
+    </footer>
+
+    <!-- favicon -->
+    <script
+      src="https://kit.fontawesome.com/cca27188b7.js"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>

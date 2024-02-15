@@ -1,0 +1,132 @@
+.contact h1 {
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.title span {
+  font-size: .85rem;
+  text-align: center;
+}
+
+.contact-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.form-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.form-content input,
+.form-content textarea {
+  background-color: var(--slate-800);
+  padding: .5rem;
+  font-size: .75rem;
+  color: var(--slate-400);
+  border-radius: 10px;
+}
+
+.form-content input::placeholder,
+.form-content textarea::placeholder {
+  font-size: .75rem;
+
+  color: var(--secondary-color);
+}
+
+.form-content input:active,
+.form-content textarea:active,
+.form-content input:hover,
+.form-content textarea:hover {
+  outline: 3px solid var(--primary-color);
+}
+
+.form-btn {
+  font-size: .75rem;
+}
+
+.contact-details {
+  padding: 1rem;
+}
+
+.contact-details p {
+  font-size: .75rem;
+  font-weight: 700;
+  color: var(--slate-800);
+}
+
+
+/* --- Media Queries --- */
+/* Extra Small Screen */
+/* @media (min-width: 475px) {} */
+
+/* Small Screens */
+@media (min-width: 640px) {
+
+  .form-content input,
+  .form-content textarea {
+    font-size: .85rem;
+  }
+
+  .form-content input::placeholder,
+  .form-content textarea::placeholder {
+    font-size: .85rem;
+  }
+
+  .contact-details p {
+    font-size: .85rem;
+  }
+
+  .form-btn {
+    font-size: .85rem;
+  }
+}
+
+/* Medium Screens */
+@media (min-width: 768px) {
+  .contact-content {
+    flex-direction: row;
+    gap: 2rem;
+  }
+
+  .form-content {
+    flex-grow: 2;
+  }
+
+  .form-content input,
+  .form-content textarea {
+    font-size: 1rem;
+  }
+
+  .form-content input::placeholder,
+  .form-content textarea::placeholder {
+    font-size: 1rem;
+  }
+
+  .form-btn {
+    font-size: 1rem;
+  }
+
+  .contact-details p {
+    font-size: 1rem;
+  }
+}
+
+/* Large Screens */
+@media (min-width: 1024px) {
+  .contact-content {
+    max-width: 840px;
+    flex-grow: 1;
+    margin: 0 auto;
+    gap: 3rem;
+  }
+}
+
+/* X Large Screens */
+/* @media (min-width: 1280px) {} */
+
+/* 2x Large Screens */
+/* @media (min-width: 1536px) {} */

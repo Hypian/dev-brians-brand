@@ -1,0 +1,244 @@
+.about {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.about p {
+  font-size: .75rem;
+  color: var(--slate-600);
+  max-width: 60ch;
+}
+
+.about-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 1rem;
+}
+
+.about-img {
+  width: 10rem;
+  border-radius: 10px;
+}
+
+.about-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 1rem;
+}
+
+.bio {
+  display: grid;
+  justify-items: start;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.bio h3 {
+  font-family: var(--alt-font-family);
+  font-size: .85rem;
+}
+
+.about-details hr {
+  border: 1px solid var(--slate-400);
+}
+
+.skills h2 {
+  font-family: var(--alt-font-family);
+  font-size: 1rem;
+}
+
+.skill-icons {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.skill-icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all .3s;
+}
+
+.skill-icon i,
+.skill-icon p {
+  color: var(--slate-600);
+  font-size: .75rem;
+}
+
+.about-btn {
+  align-self: flex-start;
+  font-size: .75rem;
+}
+
+/* xs */
+@media (min-width: 475px) {}
+
+/* sm */
+@media (min-width: 640px) {
+  .about {
+    gap: 1.5rem;
+  }
+
+  .about h1 {
+    font-size: 1.875rem;
+  }
+
+  .about p {
+    font-size: .85rem;
+  }
+
+  .about-img {
+    width: 12rem;
+  }
+
+  .about-details {
+    gap: 1.3rem;
+  }
+
+  .about-btn {
+    font-size: .85rem;
+  }
+
+  .skill-icon i {
+    font-size: 1rem !important;
+  }
+
+  .skill-icon p {
+    font-size: .85rem !important;
+  }
+}
+
+/* md */
+@media (min-width: 768px) {
+  .about h1 {
+    font-size: 2rem;
+  }
+
+  .about p {
+    font-size: 1rem;
+  }
+
+  .about-img {
+    width: 15rem;
+  }
+
+  .about-content {
+    flex-direction: row;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .about-details {
+    gap: 1.5rem;
+  }
+
+  .bio h3 {
+    font-size: 1rem;
+  }
+
+  .skills h2 {
+    font-size: 1.25rem;
+  }
+
+  .skill-icon i {
+    font-size: 1.25rem !important;
+  }
+
+  .skill-icon p {
+    font-size: 1rem !important;
+  }
+
+  .about-btn {
+    align-self: center;
+    font-size: 1rem;
+  }
+}
+
+/* lg */
+@media (min-width: 1024px) {
+  .about {
+    gap: 2rem;
+  }
+
+  .about-img {
+    width: 20rem;
+  }
+
+  .bio {
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 1rem;
+  }
+
+
+  .about-content {
+    justify-content: space-around;
+    gap: 1.5rem;
+  }
+}
+
+/* xl */
+@media (min-width: 1280px) {
+  .about {
+    gap: 2.25rem;
+  }
+
+  .about h1 {
+    font-size: 2.5rem;
+  }
+
+  .about p {
+    font-size: 1.125rem;
+  }
+
+  .about-content {
+    justify-content: flex-start;
+    gap: 5rem;
+  }
+
+  .about-img {
+    width: 22.5rem;
+  }
+
+  .about-details {
+    gap: 2.5rem;
+  }
+
+  .bio h3 {
+    font-size: 1.125rem;
+  }
+
+  .bio p {
+    font-size: 1rem !important;
+  }
+
+  .skill-icon i {
+    font-size: 1.5rem !important;
+  }
+
+  .skill-icon p {
+    font-size: 1rem !important;
+  }
+
+}
+
+/* 2xl */
+@media (min-width: 1536px) {
+  .about h1 {
+    font-size: 3rem;
+  }
+
+  .about p {
+    font-size: 1.25rem;
+  }
+
+  .skill-icon i {
+    font-size: 2rem !important;
+
+  }
+}
