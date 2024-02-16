@@ -4,7 +4,7 @@
 }
 
 .title span {
-  font-size: .85rem;
+  font-size: 0.85rem;
   text-align: center;
 }
 
@@ -24,15 +24,15 @@
 .form-content input,
 .form-content textarea {
   background-color: var(--slate-800);
-  padding: .5rem;
-  font-size: .75rem;
+  padding: 0.5rem;
+  font-size: 0.75rem;
   color: var(--slate-400);
   border-radius: 10px;
 }
 
 .form-content input::placeholder,
 .form-content textarea::placeholder {
-  font-size: .75rem;
+  font-size: 0.75rem;
 
   color: var(--secondary-color);
 }
@@ -45,7 +45,7 @@
 }
 
 .form-btn {
-  font-size: .75rem;
+  font-size: 0.75rem;
 }
 
 .contact-details {
@@ -53,11 +53,14 @@
 }
 
 .contact-details p {
-  font-size: .75rem;
+  font-size: 0.75rem;
   font-weight: 700;
   color: var(--slate-800);
 }
 
+.feedbackMessage {
+  display: none;
+}
 
 /* --- Media Queries --- */
 /* Extra Small Screen */
@@ -65,23 +68,22 @@
 
 /* Small Screens */
 @media (min-width: 640px) {
-
   .form-content input,
   .form-content textarea {
-    font-size: .85rem;
+    font-size: 0.85rem;
   }
 
   .form-content input::placeholder,
   .form-content textarea::placeholder {
-    font-size: .85rem;
+    font-size: 0.85rem;
   }
 
   .contact-details p {
-    font-size: .85rem;
+    font-size: 0.85rem;
   }
 
   .form-btn {
-    font-size: .85rem;
+    font-size: 0.85rem;
   }
 }
 

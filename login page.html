@@ -20,13 +20,23 @@
       <div class="form login">
         <div class="form-content">
           <header>Login</header>
-          <form action="#">
+          <form id="loginForm" action="#">
             <div class="field input-field">
-              <input type="email" placeholder="Email" class="input" />
+              <input
+                type="email"
+                placeholder="Email"
+                class="input"
+                id="email"
+              />
             </div>
 
             <div class="field input-field">
-              <input type="password" placeholder="Password" class="password" />
+              <input
+                type="password"
+                placeholder="Password"
+                class="password"
+                id="password"
+              />
               <i class="bx bx-hide eye-icon"></i>
             </div>
 
@@ -35,7 +45,7 @@
             </div>
 
             <div class="field button-field">
-              <button onclick="login">Login</button>
+              <button>Login</button>
             </div>
           </form>
 
@@ -69,9 +79,15 @@
       <div class="form signup">
         <div class="form-content">
           <header>Signup</header>
-          <form action="#">
+          <form id="signupForm" action="#">
             <div class="field input-field">
-              <input type="email" placeholder="Email" class="input" />
+              <input
+                type="email"
+                placeholder="Email"
+                class="input"
+                id="email1"
+                required
+              />
             </div>
 
             <div class="field input-field">
@@ -79,6 +95,8 @@
                 type="password"
                 placeholder="Create password"
                 class="password"
+                id="password1"
+                required
               />
             </div>
 
@@ -87,15 +105,16 @@
                 type="password"
                 placeholder="Confirm password"
                 class="password"
+                id="confirmPassword"
+                required
               />
               <i class="bx bx-hide eye-icon"></i>
             </div>
 
             <div class="field button-field">
-              <button onclick="regster">Signup</button>
+              <button type="submit">Signup</button>
             </div>
           </form>
-
           <div class="form-link">
             <span
               >Already have an account?
@@ -124,7 +143,5 @@
 
     <!-- js stuff -->
     <script src="login.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app.auth"></script>
-    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app.database"></script>
   </body>
 </html>
