@@ -9,7 +9,6 @@
   box-sizing: border-box;
 }
 
-
 :root {
   --bg-color: #f1f5f9;
 
@@ -29,7 +28,6 @@ body {
   overflow-x: hidden;
   font-family: var(--font-family);
 }
-
 .container {
   position: relative;
   width: 100%;
