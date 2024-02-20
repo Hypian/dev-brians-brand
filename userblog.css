@@ -13,4 +13,32 @@
   --font-family: "Quicksand", sans-serif;
   --alt-font-family: "Protest Revolution", sans-serif;
 }
-se
+body{
+    background-color:var(--bg-color);
+    font-family: var(--font-family);
+}
+h1{
+    margin-top: 100px;
+    text-align:center ;
+    justify-content: center;
+    display: flex;
+    color: var(--slate-900);
+    font-family:var(--font-family);
+    font-size: 3rem;
+}
+
+.blog-post{
+    display: flex;
+    align-items: center;
+    margin-bottom: 100px;
+}
+.blog-post img{
+    margin-right: 30px;
+    width:25rem;
+    margin-top: 3rem;
+}
+p{  
+    margin-top: -80px;
+    max-width: auto;
+    max-height: 10px;
+}
