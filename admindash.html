@@ -39,7 +39,7 @@
                                 <th>Name</th>
                                 <th>Email</th>
                                 <th>Blog Message</th>
-                                <th>Description</th>
+                                <th>Blog Title</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -51,5 +51,10 @@
         </tr>
     </table>
     <script type="text/javascript" src="./admindash.js"></script>
+    <script>
+ 
+        var formData = JSON.parse(localStorage.getItem("formData"));
+        console.log(formData);
+    </script>
 </body>
 </html>
