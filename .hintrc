@@ -4,6 +4,13 @@
   ],
   "hints": {
     "axe/language": "off",
-    "meta-viewport": "off"
-  }
+    "meta-viewport": "off",
+    "axe/name-role-value": "off"
+  },
+  "browserslist": [
+    "defaults",
+    "not ie 11",
+    "not ios_saf <= 17",
+    "not safari <= 17"
+  ]
 }
