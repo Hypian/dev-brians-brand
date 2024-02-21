@@ -63,5 +63,5 @@ document
       passwordLogin: passwordLogin,
     };
     localStorage.setItem("userStuff", JSON.stringify(userStuff));
-    window.location.href = "index.html";
+    window.location.href = "admindash.html";
   });
