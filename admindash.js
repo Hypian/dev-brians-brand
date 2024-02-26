@@ -71,37 +71,3 @@ function resetForm() {
   document.getElementById("perPrice").value = "";
   selectedRow = null;
 }
-// Retrieve the logged-in user's information from local storage
-function getLoggedInUser() {
-  var loggedInUserJson = localStorage.getItem("loggedInUser");
-  if (loggedInUserJson) {
-    return JSON.parse(loggedInUserJson);
-  }
-  return null; // No logged-in user
-}
-
-// Store the data associated with the logged-in user
-function storeDataForUser(data) {
-  var loggedInUser = getLoggedInUser();
-  if (loggedInUser) {
-    var userKey = "user_" + loggedInUser.id; // Assuming user has an ID
-    var userData = JSON.parse(localStorage.getItem(userKey)) || [];
-    userData.push(data);
-    localStorage.setItem(userKey, JSON.stringify(userData));
-  } else {
-    console.error("No logged-in user found.");
-  }
-}
-
-// Function to handle form submission
-function onFormSubmit(e) {
-  e.preventDefault();
-  var formData = readFormData();
-  if (selectedRow == null) {
-    insertNewRecord(formData);
-  } else {
-    updateRecord(formData);
-  }
-  storeDataForUser(formData); // Store the data associated with the user
-  resetForm();
-}
