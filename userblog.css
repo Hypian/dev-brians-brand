@@ -43,11 +43,44 @@ p {
   max-width: auto;
   max-height: 10px;
 }
-
+.logo h1 {
+    font-family: var(--alt-font-family);
+    font-size: 1.5rem;
+    color: var(--secondary-color);
+}
+.like {
+  transform: translateX(1000px);
+  margin-bottom: 60px;
+  font-size: 30px;
+  color: var(--slate-900);
+  max-width: 30px;
+}
+.dislike {
+  transform: translateX(1000px);
+  font-size: 30px;
+  color: var(--slate-900);
+  max-width: 30px;
+}
+.dislike:hover {
+  transform: translateX(1000px);
+  font-size: 30px;
+  color: var(--secondary-color);
+}
+.like:hover {
+  transform: translateX(1000px);
+  margin-bottom: 60px;
+  font-size: 30px;
+  color: var(--secondary-color);
+}
+.disliked .liked {
+  color: var(--secondary-color);
+}
 .container {
   width: 600px;
-  border: 2px solid #333;
+  border: 2px solid var(--slate-900);
   padding: 15px 10px;
+  transform: translateX(700px);
+  margin-bottom: 200px;
 }
 .container h2 {
   text-align: center;
@@ -57,7 +90,7 @@ textarea {
   height: 20px;
   width: 100%;
   border: none;
-  border-bottom: 2px solid #aaa;
+  border-bottom: 2px solid var(--slate-900);
   background-color: transparent;
   margin-bottom: 10px;
   resize: none;
@@ -76,8 +109,19 @@ button {
   cursor: pointer;
 }
 input[type="submit"] {
-  color: #fff;
-  background-color: #273c75;
+  display: inline-block;
+  font-weight: 600;
+  letter-spacing: -0.05em;
+  border: 2px solid var(--secondary-color);
+  color: var(--secondary-color);
+  padding: 0.5em 1em;
+  border-radius: 6px;
+  transition: all 0.5s ease-in-out;
+}
+input[type="submit"]:hover {
+  transform: scale(0.91);
+  background-color: var(--secondary-color);
+  color: var(--light-color);
 }
 button {
   color: #333;
