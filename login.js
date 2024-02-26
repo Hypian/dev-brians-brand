@@ -109,6 +109,38 @@ document
     window.location.href = "login page.html";
   });
 
+// Function to hash the password
+function hashPassword(password) {
+  // Use a cryptographic hashing algorithm such as SHA-256
+  // For simplicity, this example uses a basic hashing method
+  var hash = 0;
+  if (password.length == 0) {
+    return hash;
+  }
+  for (var i = 0; i < password.length; i++) {
+    var char = password.charCodeAt(i);
+    hash = (hash << 5) - hash + char;
+    hash = hash & hash; // Convert to 32bit integer
+  }
+  return hash;
+}
+
+// hashed password
+function hashPassword(password) {
+  // Use a cryptographic hashing algorithm such as SHA-256
+  // For simplicity, this example uses a basic hashing method
+  var hash = 0;
+  if (password.length == 0) {
+    return hash;
+  }
+  for (var i = 0; i < password.length; i++) {
+    var char = password.charCodeAt(i);
+    hash = (hash << 5) - hash + char;
+    hash = hash & hash; // Convert to 32bit integer
+  }
+  return hash;
+}
+
 document
   .getElementById("loginForm")
   .addEventListener("submit", function (event) {
@@ -136,18 +168,22 @@ document
       return;
     }
 
-    // Find the user with matching email and password
+    // Hash the password entered during login
+    var hashedPasswordLogin = hashPassword(passwordLogin);
+
+    // Find the user with matching email and hashed password
     var loggedInUser = existingUsers.find(function (user) {
-      return user.email === emailLogin && user.password === passwordLogin;
+      return user.email === emailLogin && user.password === hashedPasswordLogin;
     });
 
     if (loggedInUser) {
       alert("Login successful!"); // Notify the user that login was successful
+
       // Optionally redirect the user to a dashboard or any other page
-      window.location.href = "admindash.html";
+      window.location.href = "index.html";
     } else {
       alert(
-        "Invalid email or password. Please recheck your credentials or Signup if your new here :("
+        "Invalid email or password. Please recheck your credentials or Signup if you're new here :("
       ); // Notify the user of invalid login credentials
     }
   });

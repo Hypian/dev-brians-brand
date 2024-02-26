@@ -14,3 +14,21 @@ document.getElementById("contact").addEventListener("submit", function (event) {
   window.location.href = "index.html";
   alert("Message Successfully Sent");
 });
+// Check if there is a logged-in user on page load
+document.addEventListener("DOMContentLoaded", function () {
+  var loggedInUser = JSON.parse(localStorage.getItem("userData"));
+
+  var loginBtn = document.getElementById("loginBtn");
+  if (loginBtn && loggedInUser) {
+    // If there is a logged-in user, change the button to act as a logout button
+    loginBtn.textContent = "Logout";
+    loginBtn.classList.add("logged-in");
+    loginBtn.setAttribute("href", "#");
+    loginBtn.addEventListener("click", function () {
+      // Logout functionality
+      localStorage.removeItem("userData");
+      alert("Logged out successfully!");
+      window.location.reload(); // Reload the page after logout
+    });
+  }
+});
