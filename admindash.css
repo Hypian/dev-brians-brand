@@ -89,3 +89,8 @@ button {
 button:hover {
   background: #4b99d8;
 }
+.noice {
+  position: relative;
+  top: 50px;
+  left: 60rem;
+}
