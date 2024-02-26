@@ -5,10 +5,14 @@ var clear = document.getElementById("clear");
 
 // Function to get the logged-in user's email
 function getLoggedInUser() {
-  var loggedInUserJson = localStorage.getItem("loggedInUser");
-  if (loggedInUserJson) {
-    var loggedInUser = JSON.parse(loggedInUserJson);
-    return loggedInUser.email;
+  var userDataJson = localStorage.getItem("userData");
+  if (userDataJson) {
+    var userData = JSON.parse(userDataJson);
+    // Assuming userData is an array of users, you might want to access the first user
+    // You can modify this logic based on your user authentication mechanism
+    if (userData.length > 0) {
+      return userData[0].email; // Assuming the email is stored in the first user object
+    }
   }
   return null; // No logged-in user
 }
@@ -59,17 +63,39 @@ btn.onclick = function () {
   }
 };
 // Get the icons
-var mumIcon = document.getElementById('mum');
-var dadIcon = document.getElementById('dad');
+var likeIcon = document.getElementById("like");
+var dislikeIcon = document.getElementById("dislike");
 
-// Add click event listeners to each icon
-mumIcon.addEventListener('click', function() {
+likeIcon.addEventListener("click", function () {
+  // Check if the user is logged in
+  if (getLoggedInUser()) {
     // Toggle the "liked" class to change the color
-    this.classList.toggle('liked');
+    this.classList.toggle("liked");
+    // Get the current like status from local storage
+    var likes = JSON.parse(localStorage.getItem("likes")) || {};
+    // Update the like status for "mum" icon
+    likes.like = this.classList.contains("liked");
+    // Store the updated like status back to local storage
+    localStorage.setItem("likes", JSON.stringify(likes));
+  } else {
+    // If user is not logged in, show alert
+    alert("Please log in to like.");
+  }
 });
 
-dadIcon.addEventListener('click', function() {
+dislikeIcon.addEventListener("click", function () {
+  // Check if the user is logged in
+  if (getLoggedInUser()) {
     // Toggle the "disliked" class to change the color
-    this.classList.toggle('disliked');
+    this.classList.toggle("disliked");
+    // Get the current like status from local storage
+    var likes = JSON.parse(localStorage.getItem("likes")) || {};
+    // Update the like status for "dad" icon
+    likes.dislike = this.classList.contains("disliked");
+    // Store the updated like status back to local storage
+    localStorage.setItem("likes", JSON.stringify(likes));
+  } else {
+    // If user is not logged in, show alert
+    alert("Please log in to dislike.");
+  }
 });
-

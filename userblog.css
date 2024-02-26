@@ -44,9 +44,9 @@ p {
   max-height: 10px;
 }
 .logo h1 {
-    font-family: var(--alt-font-family);
-    font-size: 1.5rem;
-    color: var(--secondary-color);
+  font-family: var(--alt-font-family);
+  font-size: 1.5rem;
+  color: var(--secondary-color);
 }
 .like {
   transform: translateX(1000px);
@@ -64,15 +64,18 @@ p {
 .dislike:hover {
   transform: translateX(1000px);
   font-size: 30px;
-  color: var(--secondary-color);
+  color: var(--slate-500);
 }
 .like:hover {
   transform: translateX(1000px);
   margin-bottom: 60px;
   font-size: 30px;
+  color: var(--slate-500);
+}
+.disliked {
   color: var(--secondary-color);
 }
-.disliked .liked {
+.liked {
   color: var(--secondary-color);
 }
 .container {
