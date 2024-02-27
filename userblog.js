@@ -4,15 +4,12 @@ var btn = document.querySelector(".btn");
 var clear = document.getElementById("clear");
 
 // Function to get the logged-in user's email
+// Function to get the logged-in user's email from userDataTwo
 function getLoggedInUser() {
-  var userDataJson = localStorage.getItem("userData");
-  if (userDataJson) {
-    var userData = JSON.parse(userDataJson);
-    // Assuming userData is an array of users, you might want to access the first user
-    // You can modify this logic based on your user authentication mechanism
-    if (userData.length > 0) {
-      return userData[0].email; // Assuming the email is stored in the first user object
-    }
+  var userDataTwoJson = localStorage.getItem("userDataTwo");
+  if (userDataTwoJson) {
+    var userDataTwo = JSON.parse(userDataTwoJson);
+    return userDataTwo.email; // Assuming the email is directly stored in userDataTwo
   }
   return null; // No logged-in user
 }
@@ -52,16 +49,27 @@ btn.onclick = function () {
   // Get the logged-in user's email
   var loggedInUserEmail = getLoggedInUser();
   if (loggedInUserEmail) {
-    // Save the comment along with the user's email to the local storage
+    // Save the comment along with the user's email and like/dislike status to the local storage
     var comment = field.value;
     var comments = JSON.parse(localStorage.getItem("comments")) || [];
-    comments.push({ email: loggedInUserEmail, comment: comment });
+    var likes = JSON.parse(localStorage.getItem("likes")) || {};
+
+    // Add the like/dislike status to the comment object
+    var commentObject = {
+      email: loggedInUserEmail,
+      comment: comment,
+      like: likes.like || false, // Default to false if the like status is not found
+      dislike: likes.dislike || false, // Default to false if the dislike status is not found
+    };
+
+    comments.push(commentObject);
     localStorage.setItem("comments", JSON.stringify(comments));
     alert("Comment saved successfully!");
   } else {
     alert("Please login to leave a comment.");
   }
 };
+
 // Get the icons
 var likeIcon = document.getElementById("like");
 var dislikeIcon = document.getElementById("dislike");

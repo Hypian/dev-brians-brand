@@ -14,9 +14,10 @@ document.getElementById("contact").addEventListener("submit", function (event) {
   window.location.href = "index.html";
   alert("Message Successfully Sent");
 });
+
 // Check if there is a logged-in user on page load
 document.addEventListener("DOMContentLoaded", function () {
-  var loggedInUser = JSON.parse(localStorage.getItem("userData"));
+  var loggedInUser = JSON.parse(localStorage.getItem("userDataTwo"));
 
   var loginBtn = document.getElementById("loginBtn");
   if (loginBtn && loggedInUser) {
@@ -26,7 +27,7 @@ document.addEventListener("DOMContentLoaded", function () {
     loginBtn.setAttribute("href", "#");
     loginBtn.addEventListener("click", function () {
       // Logout functionality
-      localStorage.removeItem("userData");
+      localStorage.removeItem("userDataTwo");
       alert("Logged out successfully!");
       window.location.reload(); // Reload the page after logout
     });

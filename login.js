@@ -177,6 +177,14 @@ document
     });
 
     if (loggedInUser) {
+      // Store login data in local storage under an object named userDataTwo
+      var userDataTwo = {
+        email: loggedInUser.email,
+        password:loggedInUser.password,
+        // You may include other relevant user data here
+      };
+      localStorage.setItem("userDataTwo", JSON.stringify(userDataTwo));
+
       alert("Login successful!"); // Notify the user that login was successful
 
       // Optionally redirect the user to a dashboard or any other page
