@@ -1,61 +1,222 @@
 <!DOCTYPE html>
-<head>
-    <title>Crud Operation</title>
-    <link type="text/css" rel="stylesheet" href="admindash.css"
-</head>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Dashboard</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f0f0f0;
+      }
 
-<body>
-    <table>
-        <tr>
-            <td>
-                <form autocomplete="off" onsubmit="onFormSubmit()">
-                    <div>
-                        <label for="productCode">Name</label>
-                        <input type="text" name="productCode" id="productCode">
-                    </div>
-                    <div>
-                        <label for="product">Email</label>
-                        <input type="text" name="product" id="product">
-                    </div>
-                    <div>
-                        <label for="qty">Blog Message</label>
-                        <input type="text" name="qty" id="qty">
-                    </div>
-                    <div>
-                        <label for="perPrice">Description</label>
-                        <input type="text" name="perPrice" id="perPrice">
-                    </div>
+      h1 {
+        text-align: center;
+        margin-top: 20px;
+      }
 
-                    <div class="form_action--button">
-                        <input type="submit" value="Submit">
-                        <input type="reset" value="Reset">
-                    </div>
-                </form>
+      #blogForm {
+        width: 50%;
+        margin: 20px auto;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
 
-                <td>
-                    <table class="list" id="storeList">
-                        <thead>
-                            <tr>
-                                <th>Name</th>
-                                <th>Email</th>
-                                <th>Blog Message</th>
-                                <th>Blog Title</th>
-                            </tr>
-                        </thead>
-                        <tbody>
+      #blogForm label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+      }
 
-                        </tbody>
-                    </table>
-                </td>
-            </td>
-        </tr>
-    </table><div class="noice">
-<input type="submit" value="Post Blog " id="no"> 
+      #blogForm input[type="text"],
+      #blogForm textarea,
+      #blogForm button {
+        width: 100%;
+        margin-bottom: 10px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box;
+      }
+
+      #blogForm button {
+        background-color: #007bff;
+        color: #fff;
+        cursor: pointer;
+      }
+
+      #blogForm button:hover {
+        background-color: #0056b3;
+      }
+
+      #blogList {
+        width: 80%;
+        margin: 20px auto;
+      }
+
+      .blog-post {
+        background-color: #fff;
+        padding: 20px;
+        margin-bottom: 20px;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+
+      .blog-post h2 {
+        margin-top: 0;
+        margin-bottom: 10px;
+      }
+
+      .blog-post img {
+        max-width: 100%;
+        height: auto;
+        margin-top: 10px;
+      }
+
+      .blog-post button {
+        padding: 5px 10px;
+        margin-top: 10px;
+        background-color: #dc3545;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      .blog-post button:hover {
+        background-color: #c82333;
+      }
+
+      .blog-post button.editBtn {
+        background-color: #ffc107;
+        color: #000;
+        margin-right: 10px;
+      }
+
+      .blog-post button.editBtn:hover {
+        background-color: #e0a800;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Admin Dashboard</h1>
+    <form id="blogForm" enctype="multipart/form-data">
+      <label for="title">Title:</label>
+      <input type="text" id="title" name="title" />
+      <label for="text">Text:</label>
+      <textarea id="text" name="text"></textarea>
+      <label for="picture">Picture:</label>
+      <input type="file" id="picture" name="picture" />
+      <button type="submit">Create</button>
+    </form>
+
+    <div id="blogList">
+      <!-- Blog posts will be dynamically added here -->
     </div>
-    
-    <script type="text/javascript" src="./admindash.js"></script>
+
     <script>
- 
+      // JavaScript code for CRUD operations
+      document.addEventListener("DOMContentLoaded", async function () {
+        const blogForm = document.getElementById("blogForm");
+        const blogList = document.getElementById("blogList");
+
+        // Fetch blogs on page load
+        await fetchBlogs();
+
+        // Submit form event listener
+        blogForm.addEventListener("submit", async function (event) {
+          event.preventDefault();
+
+          const title = document.getElementById("title").value;
+          const text = document.getElementById("text").value;
+          const picture = document.getElementById("picture").files[0];
+          const hasImage = !!picture; // Convert to boolean
+
+          const userBlog = {
+            title,
+            text,
+            hasImage,
+          };
+
+          // Store in local storage
+          localStorage.setItem("userBlog", JSON.stringify(userBlog));
+
+          alert(
+            "Blog added to local storage. Submitting to server is not implemented."
+          );
+
+          // Optionally, you can submit the blog to the server here
+        });
+
+        // Function to fetch blogs
+        async function fetchBlogs() {
+          try {
+            const response = await fetch("/api/blogs");
+            if (response.ok) {
+              const blogs = await response.json();
+              renderBlogs(blogs);
+            } else {
+              console.error("Failed to fetch blogs");
+            }
+          } catch (error) {
+            console.error("Error fetching blogs:", error);
+          }
+        }
+
+        // Function to render blogs
+        function renderBlogs(blogs) {
+          blogList.innerHTML = ""; // Clear previous content
+          blogs.forEach((blog) => {
+            const blogDiv = document.createElement("div");
+            blogDiv.classList.add("blog-post");
+            blogDiv.innerHTML = `
+                <h2>${blog.title}</h2>
+                <p>${blog.text}</p>
+                <img src="${blog.picture}" alt="Blog Image">
+                <button class="editBtn" data-id="${blog._id}">Edit</button>
+                <button class="deleteBtn" data-id="${blog._id}">Delete</button>
+                <hr>
+            `;
+            blogList.appendChild(blogDiv);
+          });
+
+          // Add event listeners to edit buttons
+          const editButtons = document.querySelectorAll(".editBtn");
+          editButtons.forEach((button) => {
+            button.addEventListener("click", async function () {
+              const blogId = button.dataset.id;
+              // Implement edit functionality as needed
+              alert("Edit functionality is not implemented yet.");
+            });
+          });
+
+          // Add event listeners to delete buttons
+          const deleteButtons = document.querySelectorAll(".deleteBtn");
+          deleteButtons.forEach((button) => {
+            button.addEventListener("click", async function () {
+              const blogId = button.dataset.id;
+              try {
+                const response = await fetch(`/api/delete-blog/${blogId}`, {
+                  method: "DELETE",
+                });
+                if (response.ok) {
+                  alert("Blog deleted successfully!");
+                  await fetchBlogs(); // Refresh blog list
+                } else {
+                  alert("Failed to delete blog.");
+                }
+              } catch (error) {
+                console.error("Error deleting blog:", error);
+                alert("An error occurred while deleting the blog.");
+              }
+            });
+          });
+        }
+      });
     </script>
-</body>
+  </body>
 </html>

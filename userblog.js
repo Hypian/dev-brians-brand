@@ -1,3 +1,40 @@
+document.addEventListener("DOMContentLoaded", function () {
+  const blogContainer = document.getElementById("blogContainer");
+
+  // Fetch blog data from local storage
+  const userBlogData = JSON.parse(localStorage.getItem("userBlog"));
+
+  if (userBlogData) {
+    // Create blog post element
+    const blogPost = document.createElement("div");
+    blogPost.classList.add("blog-post");
+
+    // Set title
+    const title = document.createElement("h2");
+    title.textContent = userBlogData.title;
+    blogPost.appendChild(title);
+
+    // Set text
+    const text = document.createElement("p");
+    text.textContent = userBlogData.text;
+    blogPost.appendChild(text);
+
+    // Set image if available
+    if (userBlogData.pictureSelected) {
+      const image = document.createElement("img");
+      image.src = "path/to/your/image"; // Replace with actual image path
+      image.alt = "Blog Image";
+      blogPost.appendChild(image);
+    }
+
+    // Append blog post to container
+    blogContainer.appendChild(blogPost);
+  } else {
+    // Display message if no blog data found
+    blogContainer.innerHTML = "<p>No blog data available</p>";
+  }
+});
+
 var field = document.querySelector("textarea");
 var backUp = field.getAttribute("placeholder");
 var btn = document.querySelector(".btn");
