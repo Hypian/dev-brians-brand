@@ -36,15 +36,43 @@ const blogSchema = new mongoose.Schema({
   likes: { type: Number, default: 0 },
 });
 
+// Define schema for contact form
+const contactSchema = new mongoose.Schema({
+  name: { type: String, required: true },
+  email: { type: String, required: true },
+  message: { type: String, required: true },
+});
+
 // Define models
 const User = mongoose.model("User", userSchema);
 const Blog = mongoose.model("Blog", blogSchema);
+const Contact = mongoose.model("Contact", contactSchema);
 
 // Middleware
 app.use(express.json());
 app.use(morgan("dev"));
 app.use(bodyParser.json({ limit: "10mb" }));
 app.use(bodyParser.urlencoded({ limit: "10mb", extended: true }));
+
+// Contact form endpoint
+app.post("/api/contact", async (req, res) => {
+  try {
+    // Validate request body
+    const { error } = contactSchema.validate(req.body);
+    if (error) {
+      return res.status(400).json({ error: error.details[0].message });
+    }
+
+    // Process contact form data
+    // Here you can implement your logic to handle the contact form submission,
+    // such as sending an email, storing the message in the database, etc.
+
+    res.status(200).json({ message: "Contact form submitted successfully" });
+  } catch (error) {
+    console.error("Error submitting contact form:", error);
+    res.status(500).json({ error: "Internal server error" });
+  }
+});
 
 // Signup endpoint
 app.post("/api/signup", async (req, res) => {
@@ -153,7 +181,7 @@ app.post("/api/blog/:postId/comments", authenticateToken, async (req, res) => {
 
     // Add comment to the blog post
     blogPost.comments.push({
-      userId: userId,
+      userId: string,
       content: req.body.content,
     });
 
