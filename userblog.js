@@ -70,60 +70,64 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
 
-    // Comment form
-    const commentForm = document.createElement("form");
-    const textarea = document.createElement("textarea");
-    textarea.placeholder = "Add Your Comment";
-    const commentButton = document.createElement("input");
-    commentButton.type = "submit";
-    commentButton.value = "Comment";
-    commentForm.appendChild(textarea);
-    commentForm.appendChild(commentButton);
-    blogPost.appendChild(commentForm);
+    // Check if the user is logged in before adding the comment form
+    const loggedInUserEmail = localStorage.getItem("userDataTwo");
+    if (loggedInUserEmail) {
+      // Comment form
+      const commentForm = document.createElement("form");
+      const textarea = document.createElement("textarea");
+      textarea.placeholder = "Add Your Comment";
+      const commentButton = document.createElement("input");
+      commentButton.type = "submit";
+      commentButton.value = "Comment";
+      commentForm.appendChild(textarea);
+      commentForm.appendChild(commentButton);
+      blogPost.appendChild(commentForm);
 
-    // Comment form functionality
-    commentForm.addEventListener("submit", function (event) {
-      event.preventDefault();
+      // Comment form functionality
+      commentForm.addEventListener("submit", function (event) {
+        event.preventDefault();
 
-      // Retrieve logged-in user's email from local storage
-      const loggedInUserEmail = localStorage.getItem("userData");
+        // Retrieve logged-in user's email from local storage
+        const loggedInUserEmail = localStorage.getItem("userDataTwo");
 
-      if (loggedInUserEmail) {
-        // Retrieve comment text
-        const commentText = textarea.value;
+        if (loggedInUserEmail) {
+          // Retrieve comment text
+          const commentText = textarea.value;
 
-        // Get existing comments from local storage
-        let comments = JSON.parse(localStorage.getItem("comments")) || [];
+          // Get existing comments from local storage
+          let comments = JSON.parse(localStorage.getItem("comments")) || [];
 
-        // Find if user already has a comment
-        const existingCommentIndex = comments.findIndex(
-          (comment) => comment.email === loggedInUserEmail
-        );
+          // Find if user already has a comment
+          const existingCommentIndex = comments.findIndex(
+            (comment) => comment.email === loggedInUserEmail
+          );
 
-        if (existingCommentIndex !== -1) {
-          // If user already has a comment, update it
-          comments[existingCommentIndex].comment = commentText;
+          if (existingCommentIndex !== -1) {
+            // If user already has a comment, update it
+            comments[existingCommentIndex].comment = commentText;
+          } else {
+            // If user doesn't have a comment, add a new one
+            comments.push({
+              email: loggedInUserEmail,
+              comment: commentText,
+            });
+          }
+
+          // Save comments to local storage
+          localStorage.setItem("comments", JSON.stringify(comments));
+
+          // Clear textarea
+          textarea.value = "";
+
+          // Alert user that comment has been added
+          alert("Comment added successfully!");
         } else {
-          // If user doesn't have a comment, add a new one
-          comments.push({
-            email: loggedInUserEmail,
-            comment: commentText,
-          });
+          // If no logged-in user, prompt to login
+          alert("Please login to leave a comment.");
         }
-
-        // Save comments to local storage
-        localStorage.setItem("comments", JSON.stringify(comments));
-
-        // Clear textarea
-        textarea.value = "";
-
-        // Alert user that comment has been added
-        alert("Comment added successfully!");
-      } else {
-        // If no logged-in user, prompt to login
-        alert("Please login to leave a comment.");
-      }
-    });
+      });
+    }
   } else {
     // Display message if no blog data found
     blogContainer.innerHTML = "<p>No blog data available</p>";

@@ -4,13 +4,21 @@ document.getElementById("contact").addEventListener("submit", function (event) {
   let fullname = document.getElementById("fullname").value;
   let email = document.getElementById("email").value;
   let message = document.getElementById("message").value;
-  // data storage
-  var userThings = {
+
+  // Retrieve existing messages from local storage
+  let existingMessages = JSON.parse(localStorage.getItem("userMessages")) || [];
+
+  // Add the new message to the array
+  existingMessages.push({
     fullname: fullname,
     email: email,
     message: message,
-  };
-  localStorage.setItem("userThings", JSON.stringify(userThings));
+  });
+
+  // Save the updated messages array to local storage
+  localStorage.setItem("userMessages", JSON.stringify(existingMessages));
+
+  // Redirect to index.html
   window.location.href = "index.html";
   alert("Message Successfully Sent");
 });
