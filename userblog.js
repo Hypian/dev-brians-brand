@@ -9,6 +9,14 @@ document.addEventListener("DOMContentLoaded", function () {
     const blogPost = document.createElement("div");
     blogPost.classList.add("blog-post");
 
+    // Set image if available
+    if (userBlogData.pictureSelected) {
+      const image = document.createElement("img");
+      image.src = userBlogData.pictureSelected;
+      image.alt = "Blog Image";
+      blogPost.appendChild(image);
+    }
+
     // Set title
     const title = document.createElement("h2");
     title.textContent = userBlogData.title;
@@ -19,128 +27,96 @@ document.addEventListener("DOMContentLoaded", function () {
     text.textContent = userBlogData.text;
     blogPost.appendChild(text);
 
-    // Set image if available
-    if (userBlogData.pictureSelected) {
-      const image = document.createElement("img");
-      image.src = "path/to/your/image"; // Replace with actual image path
-      image.alt = "Blog Image";
-      blogPost.appendChild(image);
-    }
+    // Like button
+    const likeButton = document.createElement("button");
+    likeButton.classList.add("likeBtn");
+    likeButton.innerHTML = '<i class="far fa-thumbs-up"></i> Like';
+    blogPost.appendChild(likeButton);
 
     // Append blog post to container
     blogContainer.appendChild(blogPost);
+
+    // Like button functionality
+    likeButton.addEventListener("click", function () {
+      // Retrieve logged-in user's email from local storage
+      const loggedInUserEmail = localStorage.getItem("userDataTwo");
+
+      if (loggedInUserEmail) {
+        // Retrieve the current likes object from local storage
+        let likes = JSON.parse(localStorage.getItem("likes")) || {};
+
+        // Check if the user has already liked the blog post
+        const hasLiked = likes.hasOwnProperty(loggedInUserEmail);
+
+        // Toggle the like status
+        if (hasLiked) {
+          delete likes[loggedInUserEmail]; // Remove like if already liked
+        } else {
+          likes[loggedInUserEmail] = true; // Set like if not already liked
+        }
+
+        // Save the updated likes object to local storage
+        localStorage.setItem("likes", JSON.stringify(likes));
+
+        // Update button appearance based on like status
+        if (hasLiked) {
+          likeButton.style.color = ""; // Reset color when unliked
+        } else {
+          likeButton.style.color = "red"; // Change color to red when liked
+        }
+      } else {
+        // If no logged-in user, prompt to login
+        alert("Please login to like the blog.");
+      }
+    });
+
+    // Check if the user is an admin
+    const isAdmin = localStorage.getItem("isAdmin");
+
+    if (!isAdmin) {
+      // Comment form
+      const commentForm = document.createElement("form");
+      const textarea = document.createElement("textarea");
+      textarea.placeholder = "Add Your Comment";
+      const commentButton = document.createElement("input");
+      commentButton.type = "submit";
+      commentButton.value = "Comment";
+      commentForm.appendChild(textarea);
+      commentForm.appendChild(commentButton);
+      blogPost.appendChild(commentForm);
+
+      // Comment form functionality
+      commentForm.addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        // Retrieve logged-in user's email from local storage
+        const loggedInUserEmail = localStorage.getItem("userData");
+
+        if (loggedInUserEmail) {
+          // Retrieve comment text
+          const commentText = textarea.value;
+
+          // Save comment to local storage
+          const comments = JSON.parse(localStorage.getItem("comments")) || [];
+          comments.push({
+            email: loggedInUserEmail,
+            comment: commentText,
+          });
+          localStorage.setItem("comments", JSON.stringify(comments));
+
+          // Clear textarea
+          textarea.value = "";
+
+          // Alert user that comment has been added
+          alert("Comment added successfully!");
+        } else {
+          // If no logged-in user, prompt to login
+          alert("Please login to leave a comment.");
+        }
+      });
+    }
   } else {
     // Display message if no blog data found
     blogContainer.innerHTML = "<p>No blog data available</p>";
-  }
-});
-
-var field = document.querySelector("textarea");
-var backUp = field.getAttribute("placeholder");
-var btn = document.querySelector(".btn");
-var clear = document.getElementById("clear");
-
-// Function to get the logged-in user's email
-// Function to get the logged-in user's email from userDataTwo
-function getLoggedInUser() {
-  var userDataTwoJson = localStorage.getItem("userDataTwo");
-  if (userDataTwoJson) {
-    var userDataTwo = JSON.parse(userDataTwoJson);
-    return userDataTwo.email; // Assuming the email is directly stored in userDataTwo
-  }
-  return null; // No logged-in user
-}
-
-// Check if there's already data in the local storage
-var storedData = localStorage.getItem("textareaContent");
-
-// If there's data in the local storage, set the textarea value to that data
-if (storedData) {
-  field.value = storedData;
-}
-
-field.oninput = function () {
-  // Save the current value of the textarea to the local storage
-  localStorage.setItem("textareaContent", this.value);
-};
-
-field.onfocus = function () {
-  this.setAttribute("placeholder", "");
-  this.style.borderColor = "#333";
-  btn.style.display = "block";
-};
-
-field.onblur = function () {
-  this.setAttribute("placeholder", backUp);
-  this.style.borderColor = "#aaa";
-};
-
-clear.onclick = function () {
-  btn.style.display = "none";
-  field.value = "";
-  // Clear the data from the local storage when the user clears the textarea
-  localStorage.removeItem("textareaContent");
-};
-
-btn.onclick = function () {
-  // Get the logged-in user's email
-  var loggedInUserEmail = getLoggedInUser();
-  if (loggedInUserEmail) {
-    // Save the comment along with the user's email and like/dislike status to the local storage
-    var comment = field.value;
-    var comments = JSON.parse(localStorage.getItem("comments")) || [];
-    var likes = JSON.parse(localStorage.getItem("likes")) || {};
-
-    // Add the like/dislike status to the comment object
-    var commentObject = {
-      email: loggedInUserEmail,
-      comment: comment,
-      like: likes.like || false, // Default to false if the like status is not found
-      dislike: likes.dislike || false, // Default to false if the dislike status is not found
-    };
-
-    comments.push(commentObject);
-    localStorage.setItem("comments", JSON.stringify(comments));
-    alert("Comment saved successfully!");
-  } else {
-    alert("Please login to leave a comment.");
-  }
-};
-
-// Get the icons
-var likeIcon = document.getElementById("like");
-var dislikeIcon = document.getElementById("dislike");
-
-likeIcon.addEventListener("click", function () {
-  // Check if the user is logged in
-  if (getLoggedInUser()) {
-    // Toggle the "liked" class to change the color
-    this.classList.toggle("liked");
-    // Get the current like status from local storage
-    var likes = JSON.parse(localStorage.getItem("likes")) || {};
-    // Update the like status for "mum" icon
-    likes.like = this.classList.contains("liked");
-    // Store the updated like status back to local storage
-    localStorage.setItem("likes", JSON.stringify(likes));
-  } else {
-    // If user is not logged in, show alert
-    alert("Please log in to like.");
-  }
-});
-
-dislikeIcon.addEventListener("click", function () {
-  // Check if the user is logged in
-  if (getLoggedInUser()) {
-    // Toggle the "disliked" class to change the color
-    this.classList.toggle("disliked");
-    // Get the current like status from local storage
-    var likes = JSON.parse(localStorage.getItem("likes")) || {};
-    // Update the like status for "dad" icon
-    likes.dislike = this.classList.contains("disliked");
-    // Store the updated like status back to local storage
-    localStorage.setItem("likes", JSON.stringify(likes));
-  } else {
-    // If user is not logged in, show alert
-    alert("Please log in to dislike.");
   }
 });

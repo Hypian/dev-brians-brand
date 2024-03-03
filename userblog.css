@@ -1,8 +1,20 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap");
+
+:root {
+  --bg-color: #f1f5f9;
+  --slate-500: #64748b;
+  --slate-700: #334155;
+  --slate-900: #0f172a;
+  --primary-color: #fb7185;
+  --secondary-color: #4f46e5;
+  --font-family: "Quicksand", sans-serif;
+  --alt-font-family: "Protest Revolution", sans-serif;
+}
 body {
-  font-family: Arial, sans-serif;
+  font-family: var(--font-family);
   margin: 0;
   padding: 0;
-  background-color: #f0f0f0;
+  background-color: var(--bg-color);
 }
 
 h1 {
@@ -35,7 +47,7 @@ form button {
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
-  background-color: #007bff;
+  background-color: var(--secondary-color);
   color: #fff;
   cursor: pointer;
 }
@@ -53,16 +65,10 @@ form button:hover {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.blog-post img {
-  max-width: 100%;
-  height: auto;
-  margin-top: 10px;
-}
-
 .blog-post button {
   padding: 5px 10px;
   margin-top: 10px;
-  background-color: #dc3545;
+  background-color: var(--secondary-color);
   color: #fff;
   border: none;
   border-radius: 5px;
@@ -70,7 +76,7 @@ form button:hover {
 }
 
 .blog-post button:hover {
-  background-color: #c82333;
+  background-color: #0056b3;
 }
 
 .blog-post button.editBtn {
@@ -81,6 +87,15 @@ form button:hover {
 
 .blog-post button.editBtn:hover {
   background-color: #e0a800;
+}
+
+/* Your existing CSS styles */
+
+.blog-post img {
+  float: left;
+  margin-right: 10px;
+  max-width: 100px; /* Adjust the maximum width as needed */
+  height: auto;
 }
 
 /* Responsive Styles */

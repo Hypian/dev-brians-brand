@@ -46,9 +46,17 @@ document
     // Check if the provided email and password match the secret credentials
     if (
       emailLogin === "kagingobrian2002@gmail.com" &&
-      passwordLogin === "Asad@123"
+      hashPassword(passwordLogin) === hashPassword("Asad@123")
     ) {
       alert("Login successful!"); // Notify the user that login was successful
+
+      // Store admin data in local storage
+      const adminData = {
+        email: emailLogin,
+        passwordHash: hashPassword(passwordLogin),
+      };
+      localStorage.setItem("adminData", JSON.stringify(adminData));
+
       window.location.href = "admindash.html"; // Redirect to the admin dashboard
     } else {
       alert("Your Not The Admin :("); // Notify the user of invalid login credentials
