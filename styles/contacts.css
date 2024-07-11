@@ -34,7 +34,7 @@
 .form-content textarea::placeholder {
   font-size: 0.75rem;
 
-  color: var(--secondary-color);
+  color: var(--primary-color);
 }
 
 .form-content input:active,

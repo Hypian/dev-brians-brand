@@ -72,8 +72,8 @@ textarea {
   display: inline-block;
   font-weight: 600;
   letter-spacing: -0.05em;
-  border: 2px solid var(--secondary-color);
-  color: var(--secondary-color);
+  border: 2px solid var(--primary-color);
+  color: var(--primary-color);
   padding: .5em 1em;
   border-radius: 6px;
   transition: all .5s ease-in-out;
@@ -81,7 +81,7 @@ textarea {
 
 .btn:hover {
   transform: scale(.91);
-  background-color: var(--secondary-color);
+  background-color: var(--primary-color);
   color: var(--light-color);
 }
 
