@@ -39,5 +39,5 @@ document.addEventListener("DOMContentLoaded", function () {
       alert("Logged out successfully!");
       window.location.reload(); // Reload the page after logout
     });
-  }
+  };
 });
